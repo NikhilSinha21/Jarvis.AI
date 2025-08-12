@@ -6,9 +6,9 @@ import speech_recognition as sr # helps to recognize speech
 import webbrowser #helps to access the web-browsers
 import pyttsx3
 import requests
-from open_website import open_website
+from open_website import OpenWebsite
 from search_things import search_things
-
+from open_applications import OpenApplications
 
 '''
 #________________________________________________________________________________________
@@ -41,6 +41,15 @@ def speak(text):
     engine.runAndWait()
 
 
+def handle_open_command(command: str):
+    clean_name = command[5:].strip().lower()
+
+    if OpenApplications.is_known_app(clean_name):
+        OpenApplications.open_app(command)
+    else:
+        OpenWebsite.process_command(command)
+    
+   
 
 if __name__ == "__main__": 
     #all texts are here
@@ -71,14 +80,15 @@ while True:
                 print("Processing Command...") 
                 command = speach.recognize_google(audio,language="en-IN")
 
-                #_______________________________________________________
+                #________________________________________________________
                 if command.lower().startswith("search"):
                     search_things.process_command(command)
-
-                #________________________________________________________    
-                else: 
-                    open_website.process_command(command) 
-
+   
+                elif command.lower().startswith("open"): 
+                    handle_open_command(command)
+                else:
+                    print("sorry")    
+                #________________________________________________________ 
         else:
             print("No wake word detected")
 

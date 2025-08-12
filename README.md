@@ -1,15 +1,48 @@
-# Jarvis AI
-Made an ai with py
+Jarvis AI
+A Python-powered personal desktop assistant
 
-update 0.1 
-In this update we can command jarvis to open any kind of website
-Now javis can open any site and can search for the query you asked for 
+Jarvis AI is a voice-controlled personal assistant built with Python.
+It can perform searches, open websites, and launch desktop applications — all through natural voice commands.
 
-''' 
-Problem :- when ai opens chrome a warning apears stating "Chrome is being controlled by automated test software"
-'''
+Implemented (v0.2)
+Search the Web – Perform instant searches using voice commands
 
-next updates may contain 
-jarvis can even play the first video or open first link on sites .....
-jarvis can open any applications on pc like cameras , myfile even vscode .....
-jarvis can now detect hand gestures and help user to control pc with hand gestures .....
+Open Websites – Launch any website by name or direct URL
+
+Open Desktop Applications – Start installed applications such as:
+
+- Camera 
+
+- File Explorer 
+
+- VS Code 
+
+- Calculator 
+
+- Notepad 
+
+
+Planned Features (Upcoming)
+
+- Play the first video or open the first search result automatically
+
+- Hand gesture recognition to control the PC without touching the keyboard/mouse
+
+- Improved natural language processing for better   command recognition
+
+
+Update History
+
+
+Update 0.1
+- Added website opening feature
+
+- Added search functionality
+Note: When opening Chrome, a warning may appear:
+
+- "Chrome is being controlled by automated test software"
+
+Update 0.2
+- Added the ability to open local desktop applications
+
+- Expanded supported commands list
