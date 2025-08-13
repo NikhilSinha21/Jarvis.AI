@@ -74,7 +74,7 @@ def human_scroll(driver, down_scrolls=3, up_scrolls=2):
         driver.execute_script("window.scrollBy(0, -window.innerHeight / 2);")
         time.sleep(random.uniform(1.5, 4))
 
-class search_things:
+class SearchThings:
     @staticmethod
     def process_command(c):
         if not c.lower().startswith("search"):

@@ -35,7 +35,7 @@ class OpenApplications:
         "excel": lambda: subprocess.Popen([r"C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE"]),
         "powerpoint": lambda: subprocess.Popen([r"C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE"]),
         "spotify": lambda: subprocess.Popen(["spotify"]),
-        
+        "whatsapp": lambda: subprocess.Popen(["explorer.exe", "shell:appsFolder\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App"])
     }
 
     @staticmethod

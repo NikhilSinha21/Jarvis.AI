@@ -7,9 +7,10 @@ import webbrowser #helps to access the web-browsers
 import pyttsx3
 import requests
 from open_website import OpenWebsite
-from search_things import search_things
+from search_things import SearchThings
 from open_applications import OpenApplications
-
+from send_message import Sendmessage
+from jarvis_voice import JarvisVoice
 '''
 #________________________________________________________________________________________
 engine = pyttsx3.init()
@@ -33,12 +34,7 @@ def speak(text):
 '''
 
 
-def speak(text):
-    engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)  # female voice
-    engine.say(text)
-    engine.runAndWait()
+
 
 
 def handle_open_command(command: str):
@@ -57,43 +53,45 @@ if __name__ == "__main__":
     ai_name = "jarvis" #please name it in lowercase  
     ai_reply = "yes honey "#"On Your Command, Sir"
     #when jarvis starts  
-    speak(txt_on_start)
+    JarvisVoice.speak(txt_on_start)
 
     #listen Word jarvis to awake
-   
-while True:
-    speach = sr.Recognizer()
+    
+    while True:
+        
 
-    try:
-        with sr.Microphone() as source:
-            print("Listening.....")
-            audio = speach.listen(source,timeout=3,phrase_time_limit=3) 
-            print("Recognising")  
-        word = speach.recognize_google(audio,language="en-IN")
+        try:
+            
+            word = JarvisVoice.listen()
+            if not word:
+                continue  # No input recognized, listen again
 
-        if (word.lower() == ai_name):
-            speak(ai_reply)
-            print(ai_reply)
-            with sr.Microphone() as source:
-                print("Listening.....")
-                audio = speach.listen(source,timeout=3,phrase_time_limit=3) 
-                print("Processing Command...") 
-                command = speach.recognize_google(audio,language="en-IN")
+            if (word.lower() == ai_name):
+                JarvisVoice.speak(ai_reply)
+                print(ai_reply)
+                
+                command = JarvisVoice.listen()
+                if not word:
+                    continue  # No input recognized, listen again
 
-                #________________________________________________________
+                    #________________________________________________________
                 if command.lower().startswith("search"):
-                    search_things.process_command(command)
-   
+                    SearchThings.process_command(command)
+
                 elif command.lower().startswith("open"): 
                     handle_open_command(command)
+                elif "message" in command.lower():
+                    pass
+                    Sendmessage.whatsappmessage(command) 
+
                 else:
                     print("sorry")    
-                #________________________________________________________ 
-        else:
-            print("No wake word detected")
+                    #________________________________________________________ 
+            else:
+                print("No wake word detected")
 
 
-    except Exception as e:
-        print(f" Unexpected error: {e}")
+        except Exception as e:
+            print(f" Unexpected error: {e}")
 
 
