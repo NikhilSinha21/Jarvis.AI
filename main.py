@@ -43,7 +43,7 @@ def handle_open_command(command: str):
     if OpenApplications.is_known_app(clean_name):
         OpenApplications.open_app(command)
     else:
-        OpenWebsite.process_command(command)
+        OpenWebsite.process_command(command) 
     
    
 
