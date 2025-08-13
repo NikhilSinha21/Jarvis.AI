@@ -46,3 +46,5 @@ Update 0.2
 - Added the ability to open local desktop applications
 
 - Expanded supported commands list
+
+- Added the ability to send message through whatsapp
