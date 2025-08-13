@@ -3,14 +3,12 @@ installed PyAudio so that it can access the audio
 PyAudio is required for microphone input in speech_recognition
 '''
 import speech_recognition as sr # helps to recognize speech
-import webbrowser #helps to access the web-browsers
-import pyttsx3
-import requests
 from open_website import OpenWebsite
 from search_things import SearchThings
 from open_applications import OpenApplications
 from send_message import Sendmessage
 from jarvis_voice import JarvisVoice
+from power_commands import Power
 '''
 #________________________________________________________________________________________
 engine = pyttsx3.init()
@@ -75,14 +73,15 @@ if __name__ == "__main__":
                     continue  # No input recognized, listen again
 
                     #________________________________________________________
-                if command.lower().startswith("search"):
+                if command.lower().startswith("search"): #To search websites
                     SearchThings.process_command(command)
 
-                elif command.lower().startswith("open"): 
+                elif command.lower().startswith("open"): #To open applications , websites 
                     handle_open_command(command)
-                elif "message" in command.lower():
-                    pass
-                    Sendmessage.whatsappmessage(command) 
+                elif "message" in command.lower(): # To send message on whatsapp
+                    Sendmessage.whatsappmessage(command)
+                elif "system" in command.lower(): #To shutdown,sleep,restart,volumn,brightness etc...
+                    Power.power_command(command)         
 
                 else:
                     print("sorry")    

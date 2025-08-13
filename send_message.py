@@ -113,7 +113,7 @@ class Sendmessage:
         else :
             JarvisVoice.speak("I did not understand that")
 
-    def confirmation(timeout = 5): # no key press send messeage else abort
+    def confirmation(timeout = 3): # no key press send messeage else abort
         start_time = time.time()
         JarvisVoice.speak(f"Sending message in {timeout} Seconds.if you want to cancel please press any key")
         while time.time() - start_time < timeout:
@@ -151,7 +151,7 @@ class Sendmessage:
             pyautogui.write(message)
             time.sleep(1)
             JarvisVoice.speak(f"Are you sure you want to send message to{name}")
-            Sendmessage.confirmation(timeout = 5)
+            Sendmessage.confirmation(timeout = 3)
         else:
             JarvisVoice.speak("No Message")
             pyautogui.hotkey("alt","f4")

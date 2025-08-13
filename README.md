@@ -48,3 +48,7 @@ Update 0.2
 - Expanded supported commands list
 
 - Added the ability to send message through whatsapp
+ 
+ Update 0.3
+
+ - added power commands to shutdown and other commands
