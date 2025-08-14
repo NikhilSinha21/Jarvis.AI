@@ -1,4 +1,5 @@
 import speech_recognition as sr
+from features.file_manager import FileManager
 from features.open_website import OpenWebsite
 from features.search_things import SearchThings
 from features.open_applications import OpenApplications
@@ -18,42 +19,44 @@ def handle_open_command(command: str):
 if __name__ == "__main__":
     txt_on_start = "Initializing Jarvis"
     ai_name = "jarvis"
-    ai_reply = "yes honey"
+    ai_reply = "Hello, My Friend!"
     
     JarvisVoice.speak(txt_on_start)
-
+    file_manager = FileManager()
+    
     while True:
         try:
-            # First, listen for the wake word "jarvis"
+            print("\nListening for wake word 'jarvis'...")
             word = JarvisVoice.listen()
-            if not word:
-                continue
-
-            if word.lower() == ai_name:
+            
+            if word and ai_name in word.lower():
                 JarvisVoice.speak(ai_reply)
-                print(ai_reply)
                 
-                command = JarvisVoice.listen()
-                if not word:
-                    continue  # No input recognized, listen again
-
-                if command.lower().startswith("search"): #To search websites
-                    SearchThings.process_command(command)
-
-                elif command.lower().startswith("open"): #To open applications , websites 
-                    handle_open_command(command)
-                elif "message" in command.lower(): # To send message on whatsapp
-                    Sendmessage.whatsappmessage(command)
-                elif "system" in command.lower(): #To shutdown,sleep,restart,volumn,brightness etc...
-                    Power.power_command(command)         
-
+                print("Listening for a command (10 second timeout)...")
+                command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
+                
+                if command:
+                    if command.lower().startswith("search"):
+                        SearchThings.process_command(command)
+                    elif command.lower().startswith("open"):
+                        handle_open_command(command)
+                    elif "message" in command.lower():
+                        Sendmessage.whatsappmessage(command)
+                    elif "system" in command.lower():
+                        Power.power_command(command)
+                    elif any(keyword in command.lower() for keyword in ["create", "delete", "rename", "move", "list", "show", "go to", "change directory", "read", "edit file", "append to file"]):
+                        file_manager.process_command(command)
+                    else:
+                        JarvisVoice.speak("I'm sorry, I couldn't understand that command.")
                 else:
-                    print("sorry")
-            else:
-                # If the wake word isn't detected, do nothing and loop again
-                print(f"Heard: {word}, but not the wake word.")
-
+                    JarvisVoice.speak("I'll be waiting for my wake word again.")
+            
         except Exception as e:
             print(f"An error occurred: {e}")
             JarvisVoice.speak("I'm sorry, an error occurred. Please try again.")
             continue
+
+        except KeyboardInterrupt:
+            print("Exiting Jarvis. Goodbye!")
+            JarvisVoice.speak("Goodbye! Have a great day!")
+            break
