@@ -4,3 +4,4 @@ pyautogui
 requests
 PyAudio
 selenium
+keyboard

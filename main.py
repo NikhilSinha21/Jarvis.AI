@@ -3,12 +3,12 @@ installed PyAudio so that it can access the audio
 PyAudio is required for microphone input in speech_recognition
 '''
 import speech_recognition as sr # helps to recognize speech
-from open_website import OpenWebsite
-from search_things import SearchThings
-from open_applications import OpenApplications
-from send_message import Sendmessage
-from jarvis_voice import JarvisVoice
-from power_commands import Power
+from features.open_website import OpenWebsite
+from features.search_things import SearchThings
+from features.open_applications import OpenApplications
+from features.send_message import Sendmessage
+from features.jarvis_voice import JarvisVoice
+from features.power_commands import Power
 '''
 #________________________________________________________________________________________
 engine = pyttsx3.init()
@@ -47,7 +47,7 @@ def handle_open_command(command: str):
 
 if __name__ == "__main__": 
     #all texts are here
-    txt_on_start = "Initializing javis"
+    txt_on_start = "Initializing jarvis"
     ai_name = "jarvis" #please name it in lowercase  
     ai_reply = "yes honey "#"On Your Command, Sir"
     #when jarvis starts  
@@ -91,6 +91,8 @@ if __name__ == "__main__":
 
 
         except Exception as e:
-            print(f" Unexpected error: {e}")
+            print("Please try again.")
+            JarvisVoice.speak("Please try again.")
+            continue
 
 

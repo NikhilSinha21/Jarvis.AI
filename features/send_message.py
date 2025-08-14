@@ -74,8 +74,8 @@ class Sendmessage:
 import pygetwindow as gw
 import time 
 import pyautogui
-from jarvis_voice import JarvisVoice
-from open_applications import OpenApplications
+from features.jarvis_voice import JarvisVoice
+from features.open_applications import OpenApplications
 import keyboard
 class Sendmessage:
     def open_whatsapp(): #opens whatsapp

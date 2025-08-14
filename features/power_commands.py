@@ -1,7 +1,7 @@
 import subprocess
 import time
 import keyboard
-from jarvis_voice import JarvisVoice
+from features.jarvis_voice import JarvisVoice
 class Power:
 
     @staticmethod
