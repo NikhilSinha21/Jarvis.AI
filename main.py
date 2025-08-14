@@ -1,39 +1,10 @@
-'''
-installed PyAudio so that it can access the audio
-PyAudio is required for microphone input in speech_recognition
-'''
-import speech_recognition as sr # helps to recognize speech
+import speech_recognition as sr
 from features.open_website import OpenWebsite
 from features.search_things import SearchThings
 from features.open_applications import OpenApplications
 from features.send_message import Sendmessage
 from features.jarvis_voice import JarvisVoice
 from features.power_commands import Power
-'''
-#________________________________________________________________________________________
-engine = pyttsx3.init()
-
-# List voices and pick female (for example, index 1)
-voices = engine.getProperty('voices')
-for i, voice in enumerate(voices):
-    print(f"Voice {i}: {voice.name} - ID: {voice.id}")
-
-engine.setProperty('voice', voices[1].id)
-#_________________________________________________________________________________________
-'''
-'''
-def speak(text):
-   # engine = pyttsx3.init()
-    engine.say(text)
-    engine.runAndWait()
-   # engine.stop()
-    time.sleep(0.5)
-
-'''
-
-
-
-
 
 def handle_open_command(command: str):
     clean_name = command[5:].strip().lower()
@@ -43,28 +14,22 @@ def handle_open_command(command: str):
     else:
         OpenWebsite.process_command(command) 
     
-   
-
-if __name__ == "__main__": 
-    #all texts are here
-    txt_on_start = "Initializing jarvis"
-    ai_name = "jarvis" #please name it in lowercase  
-    ai_reply = "yes honey "#"On Your Command, Sir"
-    #when jarvis starts  
+# Main execution block
+if __name__ == "__main__":
+    txt_on_start = "Initializing Jarvis"
+    ai_name = "jarvis"
+    ai_reply = "yes honey"
+    
     JarvisVoice.speak(txt_on_start)
 
-    #listen Word jarvis to awake
-    
     while True:
-        
-
         try:
-            
+            # First, listen for the wake word "jarvis"
             word = JarvisVoice.listen()
             if not word:
-                continue  # No input recognized, listen again
+                continue
 
-            if (word.lower() == ai_name):
+            if word.lower() == ai_name:
                 JarvisVoice.speak(ai_reply)
                 print(ai_reply)
                 
@@ -72,7 +37,6 @@ if __name__ == "__main__":
                 if not word:
                     continue  # No input recognized, listen again
 
-                    #________________________________________________________
                 if command.lower().startswith("search"): #To search websites
                     SearchThings.process_command(command)
 
@@ -84,15 +48,12 @@ if __name__ == "__main__":
                     Power.power_command(command)         
 
                 else:
-                    print("sorry")    
-                    #________________________________________________________ 
+                    print("sorry")
             else:
-                print("No wake word detected")
-
+                # If the wake word isn't detected, do nothing and loop again
+                print(f"Heard: {word}, but not the wake word.")
 
         except Exception as e:
-            print("Please try again.")
-            JarvisVoice.speak("Please try again.")
+            print(f"An error occurred: {e}")
+            JarvisVoice.speak("I'm sorry, an error occurred. Please try again.")
             continue
-
-
