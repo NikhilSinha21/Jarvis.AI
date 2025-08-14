@@ -5,3 +5,5 @@ requests
 PyAudio
 selenium
 keyboard
+screen_brightness_control
+pycaw

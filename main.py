@@ -6,6 +6,7 @@ from features.open_applications import OpenApplications
 from features.send_message import Sendmessage
 from features.jarvis_voice import JarvisVoice
 from features.power_commands import Power
+from features.system_controls import SystemControls
 
 def handle_open_command(command: str):
     clean_name = command[5:].strip().lower()
@@ -23,6 +24,7 @@ if __name__ == "__main__":
     
     JarvisVoice.speak(txt_on_start)
     file_manager = FileManager()
+    system_controls = SystemControls()
     
     while True:
         try:
@@ -46,6 +48,8 @@ if __name__ == "__main__":
                         Power.power_command(command)
                     elif any(keyword in command.lower() for keyword in ["create", "delete", "rename", "move", "list", "show", "go to", "change directory", "read", "edit file", "append to file"]):
                         file_manager.process_command(command)
+                    elif any(keyword in command.lower() for keyword in ["brightness", "volume", "mute", "unmute"]):
+                        SystemControls.handle_system_command(command, system_controls)
                     else:
                         JarvisVoice.speak("I'm sorry, I couldn't understand that command.")
                 else:
