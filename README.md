@@ -1,8 +1,7 @@
 Jarvis AI
 A Python-powered personal desktop assistant
 
-Jarvis AI is a voice-controlled personal assistant built with Python.
-It can perform searches, open websites, and launch desktop applications — all through natural voice commands.
+Jarvis AI is a Python-powered personal desktop assistant that responds to natural voice commands. It can perform searches, open websites, launch desktop applications, control system functions, and
 
 Implemented (v0.2)
 Search the Web – Perform instant searches using voice commands

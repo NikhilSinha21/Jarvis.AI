@@ -1,0 +1,57 @@
+{
+    "power": {
+        "shutdown": [
+            "shutdown",
+            "shut",
+            "power off",
+            "turn off",
+            "off"
+        ],
+        "restart": [
+            "restart",
+            "reboot"
+        ],
+        "signout": [
+            "sign out",
+            "log off",
+            "logout",
+            "log out"
+        ],
+        "lock": [
+            "lock",
+            "lock screen"
+        ],
+        "sleep": [
+            "sleep",
+            "suspend"
+        ]
+    },
+    "search": {
+        "search": [
+            "search",
+            "find",
+            "lookup"
+        ],
+        "youtube": [
+            "youtube",
+            "yt"
+        ]
+    },
+    "open": {
+        "browser": [
+            "chrome",
+            "firefox"
+        ],
+        "editor": [
+            "vscode",
+            "notepad"
+        ]
+    },
+    "message": {
+        "whatsapp": [
+            "message",
+            "whatsapp",
+            "chat"
+        ]
+    }
+}

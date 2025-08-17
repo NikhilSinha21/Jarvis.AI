@@ -7,7 +7,8 @@ from features.send_message import Sendmessage
 from features.jarvis_voice import JarvisVoice
 from features.power_commands import Power
 from features.system_controls import SystemControls
-
+from nlp_training.nlp_command import NlpTrain
+from nlp_training.word_learner import WordLearner
 def handle_open_command(command: str):
     clean_name = command[5:].strip().lower()
 
@@ -34,23 +35,32 @@ if __name__ == "__main__":
             if word and ai_name in word.lower():
                 JarvisVoice.speak(ai_reply)
                 
-                print("Listening for a command (10 second timeout)...")
+                print("Listening for a command (10 second timeout)...") 
                 command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
                 
                 if command:
+                    #_______________________________________________________________________
+                        
+                    NlpTrain.nlp_for_power_command(command)
+
+                    #_______________________________________________________________________
+                        
                     if command.lower().startswith("search"):
                         SearchThings.process_command(command)
                     elif command.lower().startswith("open"):
                         handle_open_command(command)
                     elif "message" in command.lower():
                         Sendmessage.whatsappmessage(command)
-                    elif "system" in command.lower():
-                        Power.power_command(command)
                     elif any(keyword in command.lower() for keyword in ["create", "delete", "rename", "move", "list", "show", "go to", "change directory", "read", "edit file", "append to file"]):
                         file_manager.process_command(command)
                     elif any(keyword in command.lower() for keyword in ["brightness", "volume", "mute", "unmute"]):
                         SystemControls.handle_system_command(command, system_controls)
                     else:
+                        #_______________________________________________________________________
+                        
+                        
+                           
+                        #________________________________________________________________________
                         JarvisVoice.speak("I'm sorry, I couldn't understand that command.")
                 else:
                     JarvisVoice.speak("I'll be waiting for my wake word again.")
@@ -64,3 +74,15 @@ if __name__ == "__main__":
             print("Exiting Jarvis. Goodbye!")
             JarvisVoice.speak("Goodbye! Have a great day!")
             break
+
+
+
+
+
+
+        '''
+                        if not success:
+                            tokens = command.split()
+                            for word in tokens:
+                                WordLearner.learn_new_words(tokens,command)
+                            ''' 

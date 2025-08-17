@@ -1,18 +1,3 @@
-'''
-
-import os
-import subprocess
-
-class open_applications:
-   def open_app(c):
-      if c.lower().startswith("open"):
-         try:
-            command = c[5:].strip()
-            os.system(command)
-         except Exception as e:
-            print(f"Can't open application{e}")   
-            '''
-
 
 import subprocess
 

@@ -7,3 +7,5 @@ selenium
 keyboard
 screen_brightness_control
 pycaw
+spacy
+en_core_web_sm

@@ -67,26 +67,3 @@ class Power:
              except Exception:
                 subprocess.run(["rundll32.exe", "powrprof.dll,SetSuspendState", "Sleep"])
     
-
-
-    def power_command(c): 
-        if c.lower().startswith("system"):
-            command = c[7:].strip()
-            
-            if "shutdown" in command.lower() or "power off" in command.lower():
-                Power.shutdown()
-
-            elif "restart" in command.lower() or "reboot" in command.lower():
-                Power.restart()
-
-            elif "sign out" in command.lower() or "log off" in command.lower() or "log out" in command.lower():
-                Power.signout()
-
-            elif "lock" in command.lower() or "lock screen" in command.lower() or "lock the screen" in command.lower():
-                Power.lock()
-
-            elif "sleep" in command.lower():
-                Power.sleep()
-        else: 
-              JarvisVoice.speak("command not clear")      
-
