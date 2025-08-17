@@ -1,4 +1,3 @@
-import speech_recognition as sr
 from features.file_manager import FileManager
 from features.open_website import OpenWebsite
 from features.search_things import SearchThings
@@ -34,7 +33,7 @@ if __name__ == "__main__":
             
             if word and ai_name in word.lower():
                 JarvisVoice.speak(ai_reply)
-                
+                #_______________________________________________________________________________________________
                 print("Listening for a command (10 second timeout)...") 
                 command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
                 
@@ -47,8 +46,8 @@ if __name__ == "__main__":
                         
                     if command.lower().startswith("search"):
                         SearchThings.process_command(command)
-                    elif command.lower().startswith("open"):
-                        handle_open_command(command)
+                    #elif command.lower().startswith("open"):
+                        #handle_open_command(command)
                     elif "message" in command.lower():
                         Sendmessage.whatsappmessage(command)
                     elif any(keyword in command.lower() for keyword in ["create", "delete", "rename", "move", "list", "show", "go to", "change directory", "read", "edit file", "append to file"]):
@@ -56,11 +55,6 @@ if __name__ == "__main__":
                     elif any(keyword in command.lower() for keyword in ["brightness", "volume", "mute", "unmute"]):
                         SystemControls.handle_system_command(command, system_controls)
                     else:
-                        #_______________________________________________________________________
-                        
-                        
-                           
-                        #________________________________________________________________________
                         JarvisVoice.speak("I'm sorry, I couldn't understand that command.")
                 else:
                     JarvisVoice.speak("I'll be waiting for my wake word again.")

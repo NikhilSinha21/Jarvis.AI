@@ -16,8 +16,7 @@ class OpenWebsite:
             webbrowser.open(f"https://{site_name}.in")
 
     @staticmethod
-    def process_command(c: str):
-        command = c[5:].strip().replace(" ", "")
+    def process_command(command: str):
         if "." not in command:
             OpenWebsite.opens_url(command)
         else:

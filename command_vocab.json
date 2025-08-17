@@ -25,33 +25,24 @@
             "sleep",
             "suspend"
         ]
+    
     },
-    "search": {
-        "search": [
-            "search",
-            "find",
-            "lookup"
-        ],
-        "youtube": [
-            "youtube",
-            "yt"
-        ]
-    },
-    "open": {
-        "browser": [
-            "chrome",
-            "firefox"
-        ],
-        "editor": [
-            "vscode",
-            "notepad"
-        ]
-    },
-    "message": {
-        "whatsapp": [
-            "message",
-            "whatsapp",
-            "chat"
-        ]
+        "open": {
+        "website": [
+            "open",
+            "launch",
+            "start",
+            "run",
+            "go to",
+            "visit",
+            "bring up",
+            "show me",
+            "take me to",
+            "go online to",
+            "access"
+                ]
     }
 }
+
+
+
