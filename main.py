@@ -30,13 +30,12 @@ if __name__ == "__main__":
         try:
             print("\nListening for wake word 'jarvis'...")
             word = JarvisVoice.listen()
-            
             if word and ai_name in word.lower():
                 JarvisVoice.speak(ai_reply)
                 #_______________________________________________________________________________________________
                 print("Listening for a command (10 second timeout)...") 
-                command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
-                
+                #command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
+                command = "Can you please send Sameer a message how are you my friend"
                 if command:
                     #_______________________________________________________________________
                         

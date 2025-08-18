@@ -41,6 +41,20 @@
             "go online to",
             "access"
                 ]
+    },
+     "message": {
+        "send": [
+            "message",
+            "text",
+            "ping",
+            "DM",
+            "note",
+            "shout",
+            "send a chat",
+            "drop a line",
+            "mail",
+            "notify"
+        ]
     }
 }
 

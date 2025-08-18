@@ -34,24 +34,13 @@ class Sendmessage:
         #Sendmessage.get_coordinates()
 
     def search_name(n:str) -> bool:
-        if "send" in n:
-            name = n[5:].strip()
-            if name != "" :
                 pyautogui.click(x=249, y=165)
                 time.sleep(1)
-                pyautogui.write(name)
+                pyautogui.write(n)
                 time.sleep(1)
                 pyautogui.press("tab")
                 pyautogui.press("enter")
-                return True
-            else:
-                JarvisVoice.speak("Please tell me the name") 
-                pyautogui.hotkey("alt","f4")
-
-                return False   
-
-        else :
-            JarvisVoice.speak("I did not understand that")
+                return True  
 
     def confirmation(timeout = 3): # no key press send messeage else abort
         start_time = time.time()
@@ -81,17 +70,12 @@ class Sendmessage:
             JarvisVoice.speak("No Message")
             pyautogui.hotkey("alt","f4")
      
-    def whatsappmessage(c):
-        if "a message" in c.lower():
-            text = c.lower().split("a message",1) # a message # the message # message
-            get_name = text[0].strip()
-            message = text[1].strip() if len(text)>1 else ""
-           
+    def whatsappmessage(c,m = None):
                     
             
             Sendmessage.open_whatsapp()
 
-            result = Sendmessage.search_name(get_name)
+            result = Sendmessage.search_name(c)
             if result:
-                Sendmessage.sending_message(get_name, message)
+                Sendmessage.sending_message(c,m)
 

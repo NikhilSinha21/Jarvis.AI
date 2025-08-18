@@ -1,0 +1,780 @@
+[ {
+  "text": "Send Sameer a message saying hello","entities": [[5, 11, "PERSON"],  [29, 34, "MESSAGE"] ]},
+  {
+    "text":"To Rahul send a message how are you buddy ",
+      "entities": [
+    [3, 8, "PERSON"],   
+    [24,41, "MESSAGE"] 
+  ]
+  },
+
+  {
+    "text": "Send Ramesh a message saying good morning",
+    "entities": [
+      [5, 11, "PERSON"],
+      [29, 41, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Tell Priya hello, how are you?",
+    "entities": [
+      [5, 10, "PERSON"],
+      [11, 29, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Can you send a message to Ankit saying let's meet tomorrow",
+    "entities": [
+      [27, 32, "PERSON"],
+      [40, 58, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Send a WhatsApp message to Sameer: where are you?",
+    "entities": [
+      [28, 34, "PERSON"],
+      [36, 49, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Message Rahul that I will call you in the evening",
+    "entities": [
+      [8, 13, "PERSON"],
+      [19, 48, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Please send Neha a message: meeting postponed",
+    "entities": [
+      [12, 16, "PERSON"],
+      [27, 45, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Could you tell Arjun good luck for your exams?",
+    "entities": [
+      [13, 18, "PERSON"],
+      [19, 44, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Send a message to Kavita saying see you soon",
+    "entities": [
+      [18, 24, "PERSON"],
+      [32, 44, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Write to Aman: thanks for helping me yesterday",
+    "entities": [
+      [9, 13, "PERSON"],
+      [15, 45, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Can you send a quick message to Deepak saying I’m outside your house",
+    "entities": [
+      [35, 41, "PERSON"],
+      [49, 72, "MESSAGE"]
+    ]
+  },
+  {
+    "text": "Send Sameer a message saying hello",
+    "entities": [[5, 11, "PERSON"], [29, 34, "MESSAGE"]]
+  },
+  {
+    "text": "Tell Rahul good morning on whatsapp",
+    "entities": [[5, 10, "PERSON"], [11, 23, "MESSAGE"]]
+  },
+  {
+    "text": "Can you send Priya a message: how are you?",
+    "entities": [[13, 18, "PERSON"], [29, 40, "MESSAGE"]]
+  },
+  {
+    "text": "Message Neha saying see you soon",
+    "entities": [[8, 12, "PERSON"], [20, 32, "MESSAGE"]]
+  },
+  {
+    "text": "Please text Arjun hi buddy",
+    "entities": [[12, 17, "PERSON"], [18, 25, "MESSAGE"]]
+  },
+  {
+    "text": "Send a WhatsApp to Kavita: I miss you",
+    "entities": [[21, 27, "PERSON"], [29, 38, "MESSAGE"]]
+  },
+  {
+    "text": "Could you message Deepak saying call me later",
+    "entities": [[17, 23, "PERSON"], [31, 44, "MESSAGE"]]
+  },
+  {
+    "text": "Write to Aman thanks a lot for yesterday",
+    "entities": [[9, 13, "PERSON"], [14, 39, "MESSAGE"]]
+  },
+  {
+    "text": "Forward this to Ramesh: meeting at 5pm",
+    "entities": [[15, 21, "PERSON"], [23, 37, "MESSAGE"]]
+  },
+  {
+    "text": "Tell Ankit I will be late today",
+    "entities": [[5, 10, "PERSON"], [11, 31, "MESSAGE"]]
+  },
+  {
+    "text": "Please send Seema a message saying see you later",
+    "entities": [[12, 17, "PERSON"], [29, 42, "MESSAGE"]]
+  },
+  {
+    "text": "Message Pooja saying good luck for exams",
+    "entities": [[8, 13, "PERSON"], [21, 40, "MESSAGE"]]
+  },
+  {
+    "text": "Send Abhishek hello how are you?",
+    "entities": [[5, 13, "PERSON"], [14, 31, "MESSAGE"]]
+  },
+  {
+    "text": "Text Karan: thanks for the help",
+    "entities": [[5, 10, "PERSON"], [12, 30, "MESSAGE"]]
+  },
+  {
+    "text": "Send a message to Sneha saying where are you now",
+    "entities": [[18, 23, "PERSON"], [31, 47, "MESSAGE"]]
+  },
+  {
+    "text": "Message to Virat: congrats on the win",
+    "entities": [[11, 16, "PERSON"], [18, 37, "MESSAGE"]]
+  },
+  {
+    "text": "Send Ritu a message: happy birthday!",
+    "entities": [[5, 9, "PERSON"], [20, 35, "MESSAGE"]]
+  },
+  {
+    "text": "Please send Mohit: call me ASAP",
+    "entities": [[12, 17, "PERSON"], [19, 30, "MESSAGE"]]
+  },
+  {
+    "text": "Tell Tanya I’m waiting outside",
+    "entities": [[5, 10, "PERSON"], [11, 32, "MESSAGE"]]
+  },
+  {
+    "text": "Send message to Aditya: see you at the party",
+    "entities": [[16, 22, "PERSON"], [24, 44, "MESSAGE"]]
+  },
+
+  
+  {
+    "text": "Seema tell Ramesh I reached home",
+    "entities": [[6, 12, "PERSON"], [13, 31, "MESSAGE"]]
+  },
+  {
+    "text": "Message for Ankit dinner is ready",
+    "entities": [[12, 17, "PERSON"], [18, 34, "MESSAGE"]]
+  },
+  
+  {
+    "text": "Tell Mohit lights are not working",
+    "entities": [[5, 10, "PERSON"], [11, 35, "MESSAGE"]]
+  },
+  
+  
+  {
+    "text": "To Priya good luck with your exams",
+    "entities": [[3, 8, "PERSON"], [9, 35, "MESSAGE"]]
+  },
+  
+  {
+    "text": "Send Sameer a message saying hello on WhatsApp",
+    "entities": [[5, 11, "PERSON"], [29, 34, "MESSAGE"]]
+  },
+  {
+    "text": "Message Rahul how are you on WhatsApp",
+    "entities": [[8, 13, "PERSON"], [14, 26, "MESSAGE"]]
+  },
+  {
+    "text": "To Seema tell her I’ll be late on WhatsApp",
+    "entities": [[3, 8, "PERSON"], [9, 28, "MESSAGE"]]
+  },
+  {
+    "text": "Say hi to Ankit on WhatsApp",
+    "entities": [[9, 14, "PERSON"], [4, 6, "MESSAGE"]]
+  },
+  {
+    "text": "Please WhatsApp Neha dinner is ready",
+    "entities": [[15, 19, "PERSON"], [20, 36, "MESSAGE"]]
+  },
+  {
+    "text": "Send a WhatsApp to Priya good night",
+    "entities": [[20, 25, "PERSON"], [26, 36, "MESSAGE"]]
+  },
+  {
+  "text": "Send a WhatsApp message to Rahul Sharma saying hello bhai, kal milte hain at the park",
+  "entities": [
+    [28, 40, "PERSON"],
+    [48, 82, "MESSAGE"]
+  ]
+},
+{
+  "text": "Message Priya Rani Verma that I am really happy for you, tumhari promotion ki party kab hai?",
+  "entities": [
+    [8, 24, "PERSON"],
+    [30, 85, "MESSAGE"]
+  ]
+},
+{
+  "text": "Can you send a message to Ankit Kumar saying bro let's plan a trip to Manali next weekend, chalenge?",
+  "entities": [
+    [27, 38, "PERSON"],
+    [46, 101, "MESSAGE"]
+  ]
+},
+{
+  "text": "Tell Neha Gupta hello yaar, mujhe tumse kal urgent baat karni hai regarding the project",
+  "entities": [
+    [5, 15, "PERSON"],
+    [16, 83, "MESSAGE"]
+  ]
+},
+{
+  "text": "Please send a WhatsApp to Sameer Ali saying I’m at the station right now, tum kahan ho?",
+  "entities": [
+    [27, 37, "PERSON"],
+    [45, 86, "MESSAGE"]
+  ]
+},
+{
+  "text": "Send Ramesh Chandra Singh a message: bhai kal ka cricket match yaad hai na, sharp 6 baje!",
+  "entities": [
+    [5, 24, "PERSON"],
+    [36, 83, "MESSAGE"]
+  ]
+},
+{
+  "text": "Write to Pooja Mehta thanks for your help today, tum bina ye kaam complete nahi hota",
+  "entities": [
+    [9, 20, "PERSON"],
+    [21, 82, "MESSAGE"]
+  ]
+},
+{
+  "text": "Forward this to Mohit Raj, I reached safely ghar par, tum tension mat lena",
+  "entities": [
+    [15, 24, "PERSON"],
+    [26, 74, "MESSAGE"]
+  ]
+},
+{
+  "text": "To Kavita Sharma send this message: kal subah 8 baje library milna, aur notes lana please",
+  "entities": [
+    [3, 16, "PERSON"],
+    [34, 91, "MESSAGE"]
+  ]
+},
+{
+  "text": "Message Abhishek Anand saying hello dost, movie ka plan bana rahe ho kya weekend pe?",
+  "entities": [
+    [8, 23, "PERSON"],
+    [31, 86, "MESSAGE"]
+  ]
+},
+{
+  "text": "Please WhatsApp Tanya Roy: kal mom dad ghar aa rahe hain, dinner tumhare ghar rakhe?",
+  "entities": [
+    [15, 24, "PERSON"],
+    [26, 83, "MESSAGE"]
+  ]
+},
+{
+  "text": "Tell Aditya Pratap Singh mujhe office ki files bhej dena, warna boss daantega",
+  "entities": [
+    [5, 23, "PERSON"],
+    [24, 82, "MESSAGE"]
+  ]
+},
+{
+  "text": "Send Seema Kapoor a message saying hi didi, shaam ko bazaar chalna hai kya?",
+  "entities": [
+    [5, 17, "PERSON"],
+    [29, 76, "MESSAGE"]
+  ]
+},
+{
+  "text": "Message to Virat Kohli bro, kal practice ground par 7 baje time pe aa jana",
+  "entities": [
+    [11, 22, "PERSON"],
+    [23, 78, "MESSAGE"]
+  ]
+},
+{
+  "text": "Say to Deepak Yadav I am waiting near the metro station, tu kahan hai?",
+  "entities": [
+    [7, 19, "PERSON"],
+    [20, 73, "MESSAGE"]
+  ]
+},
+{
+  "text": "Send a WhatsApp message to Rahul Sharma saying hello bhai, kal milte hain at the park",
+  "entities": [[28, 40, "PERSON"], [48, 82, "MESSAGE"]]
+},
+{
+  "text": "Message Priya Rani Verma that I am really happy for you, tumhari promotion ki party kab hai?",
+  "entities": [[8, 24, "PERSON"], [30, 85, "MESSAGE"]]
+},
+{
+  "text": "Can you send a message to Ankit Kumar saying bro let's plan a trip to Manali next weekend, chalenge?",
+  "entities": [[27, 38, "PERSON"], [46, 101, "MESSAGE"]]
+},
+{
+  "text": "Tell Neha Gupta hello yaar, mujhe tumse kal urgent baat karni hai regarding the project",
+  "entities": [[5, 15, "PERSON"], [16, 83, "MESSAGE"]]
+},
+{
+  "text": "Please send a WhatsApp to Sameer Ali saying I’m at the station right now, tum kahan ho?",
+  "entities": [[27, 37, "PERSON"], [45, 86, "MESSAGE"]]
+},
+{
+  "text": "Send Ramesh Chandra Singh a message: bhai kal ka cricket match yaad hai na, sharp 6 baje!",
+  "entities": [[5, 24, "PERSON"], [36, 83, "MESSAGE"]]
+},
+{
+  "text": "Write to Pooja Mehta thanks for your help today, tum bina ye kaam complete nahi hota",
+  "entities": [[9, 20, "PERSON"], [21, 82, "MESSAGE"]]
+},
+{
+  "text": "Forward this to Mohit Raj, I reached safely ghar par, tum tension mat lena",
+  "entities": [[15, 24, "PERSON"], [26, 74, "MESSAGE"]]
+},
+{
+  "text": "To Kavita Sharma send this message: kal subah 8 baje library milna, aur notes lana please",
+  "entities": [[3, 16, "PERSON"], [34, 91, "MESSAGE"]]
+},
+{
+  "text": "Message Abhishek Anand saying hello dost, movie ka plan bana rahe ho kya weekend pe?",
+  "entities": [[8, 23, "PERSON"], [31, 86, "MESSAGE"]]
+},
+{
+  "text": "Please WhatsApp Tanya Roy: kal mom dad ghar aa rahe hain, dinner tumhare ghar rakhe?",
+  "entities": [[15, 24, "PERSON"], [26, 83, "MESSAGE"]]
+},
+{
+  "text": "Tell Aditya Pratap Singh mujhe office ki files bhej dena, warna boss daantega",
+  "entities": [[5, 23, "PERSON"], [24, 82, "MESSAGE"]]
+},
+{
+  "text": "Send Seema Kapoor a message saying hi didi, shaam ko bazaar chalna hai kya?",
+  "entities": [[5, 17, "PERSON"], [29, 76, "MESSAGE"]]
+},
+{
+  "text": "Message to Virat Kohli bro, kal practice ground par 7 baje time pe aa jana",
+  "entities": [[11, 22, "PERSON"], [23, 78, "MESSAGE"]]
+},
+{
+  "text": "Say to Deepak Yadav I am waiting near the metro station, tu kahan hai?",
+  "entities": [[7, 19, "PERSON"], [20, 73, "MESSAGE"]]
+},
+{
+  "text": "Please text Rohit Kumar Singh jaldi ghar aaja, mummy bula rahi hain",
+  "entities": [[12, 30, "PERSON"], [31, 72, "MESSAGE"]]
+},
+{
+  "text": "Send WhatsApp to Sanya Kapoor: kal ki flight tickets confirm kar lena",
+  "entities": [[18, 30, "PERSON"], [32, 77, "MESSAGE"]]
+},
+{
+  "text": "Forward to Arjun Malhotra: mujhe kal morning jogging me join karna",
+  "entities": [[12, 26, "PERSON"], [28, 74, "MESSAGE"]]
+},
+{
+  "text": "Message Karan Singh Chauhan dinner at my place tonight, tu free hai?",
+  "entities": [[8, 28, "PERSON"], [29, 76, "MESSAGE"]]
+},
+{
+  "text": "Tell Pooja Rani kal 3 baje online meeting hai, laptop ready rakhna",
+  "entities": [[5, 15, "PERSON"], [16, 72, "MESSAGE"]]
+},
+{
+  "text": "Send a message to Manish Kumar Sharma: kal hostel wapas aana mat bhoolna",
+  "entities": [[18, 37, "PERSON"], [39, 85, "MESSAGE"]]
+},
+{
+  "text": "Say to Tanya Gupta ki kal Diwali shopping karne chalein?",
+  "entities": [[7, 18, "PERSON"], [22, 62, "MESSAGE"]]
+},
+{
+  "text": "Write to Priya Sen thanks for helping me out in the project, tum best ho",
+  "entities": [[9, 18, "PERSON"], [19, 77, "MESSAGE"]]
+},
+{
+  "text": "Message to Ramesh Yadav: bhoolna mat documents laana kal office",
+  "entities": [[11, 23, "PERSON"], [25, 73, "MESSAGE"]]
+},
+{
+  "text": "Please send Mohit Kumar a WhatsApp saying kal raat call karna important hai",
+  "entities": [[12, 23, "PERSON"], [42, 87, "MESSAGE"]]
+},
+{
+  "text": "Tell Seema Rani I’m outside your house, gate kholo",
+  "entities": [[5, 15, "PERSON"], [16, 53, "MESSAGE"]]
+},
+{
+  "text": "Send WhatsApp to Virat Sharma kal match ke tickets le aana",
+  "entities": [[18, 30, "PERSON"], [31, 69, "MESSAGE"]]
+},
+{
+  "text": "Message Aman Kapoor bro mujhe kal library me notes de dena",
+  "entities": [[8, 19, "PERSON"], [20, 69, "MESSAGE"]]
+},
+{
+  "text": "Text to Deepika Verma: kal shaam 6 baje cafe me milna",
+  "entities": [[8, 20, "PERSON"], [22, 63, "MESSAGE"]]
+},
+{
+  "text": "Send Sameer Khan a message saying hello bhai kal milte hain on WhatsApp",
+  "entities": [[5, 16, "PERSON"], [34, 64, "MESSAGE"]]
+},
+{
+  "text": "Message Priya Rani Verma how are you yaar, kal movie dekhne chale on WhatsApp",
+  "entities": [[8, 24, "PERSON"], [25, 74, "MESSAGE"]]
+},
+{
+  "text": "Can you send a WhatsApp to Ankit Kumar Singh: bro I will meet you tomorrow evening at CP",
+  "entities": [[27, 44, "PERSON"], [46, 89, "MESSAGE"]]
+},
+{
+  "text": "Tell Neha Gupta I am really busy right now, kal baat karte hain on WhatsApp",
+  "entities": [[5, 15, "PERSON"], [16, 67, "MESSAGE"]]
+},
+{
+  "text": "Please WhatsApp Sameer Ali: I’m at the station right now, tum kahan ho?",
+  "entities": [[15, 25, "PERSON"], [27, 70, "MESSAGE"]]
+},
+{
+  "text": "Send a WhatsApp to Ramesh Chandra Singh saying kal ka cricket match yaad rakhna 7 baje",
+  "entities": [[21, 42, "PERSON"], [50, 96, "MESSAGE"]]
+},
+{
+  "text": "Write to Pooja Mehta on WhatsApp: thanks for helping me out today, tum best ho",
+  "entities": [[9, 20, "PERSON"], [34, 81, "MESSAGE"]]
+},
+{
+  "text": "Forward this on WhatsApp to Mohit Raj: I reached safely ghar par, tum tension mat lena",
+  "entities": [[30, 39, "PERSON"], [41, 89, "MESSAGE"]]
+},
+{
+  "text": "To Kavita Sharma on WhatsApp send this: kal subah 8 baje office mat bhoolna",
+  "entities": [[3, 16, "PERSON"], [36, 78, "MESSAGE"]]
+},
+{
+  "text": "WhatsApp Abhishek Anand saying hello dost, movie ka plan bana rahe ho kya weekend pe?",
+  "entities": [[9, 24, "PERSON"], [32, 87, "MESSAGE"]]
+},
+{
+  "text": "Please WhatsApp Tanya Roy kal mom dad ghar aa rahe hain, dinner tumhare ghar rakhe?",
+  "entities": [[15, 24, "PERSON"], [25, 82, "MESSAGE"]]
+},
+{
+  "text": "Tell on WhatsApp Aditya Pratap Singh mujhe office ki files bhej dena, warna boss daantega",
+  "entities": [[20, 39, "PERSON"], [40, 98, "MESSAGE"]]
+},
+{
+  "text": "Send a WhatsApp message to Seema Kapoor hi didi, shaam ko bazaar chalna hai kya?",
+  "entities": [[28, 40, "PERSON"], [41, 87, "MESSAGE"]]
+},
+{
+  "text": "Message to Virat Kohli on WhatsApp: bro kal practice ground par 7 baje time pe aa jana",
+  "entities": [[11, 22, "PERSON"], [36, 91, "MESSAGE"]]
+},
+{
+  "text": "Say to Deepak Yadav on WhatsApp I am waiting near the metro station, tu kahan hai?",
+  "entities": [[7, 19, "PERSON"], [33, 86, "MESSAGE"]]
+},
+{
+  "text": "Please text Rohit Kumar Singh on WhatsApp: jaldi ghar aaja, mummy bula rahi hain",
+  "entities": [[12, 30, "PERSON"], [44, 85, "MESSAGE"]]
+},
+{
+  "text": "Send WhatsApp to Sanya Kapoor kal ki flight tickets confirm kar lena",
+  "entities": [[18, 30, "PERSON"], [31, 73, "MESSAGE"]]
+},
+{
+  "text": "Forward to Arjun Malhotra on WhatsApp: mujhe kal morning jogging me join karna",
+  "entities": [[12, 26, "PERSON"], [40, 86, "MESSAGE"]]
+},
+{
+  "text": "WhatsApp Karan Singh Chauhan dinner at my place tonight, tu free hai?",
+  "entities": [[9, 29, "PERSON"], [30, 76, "MESSAGE"]]
+},
+{
+  "text": "Tell Pooja Rani on WhatsApp kal 3 baje online meeting hai, laptop ready rakhna",
+  "entities": [[5, 15, "PERSON"], [29, 84, "MESSAGE"]]
+},
+{
+  "text": "Send a message to Manish Kumar Sharma on WhatsApp: kal hostel wapas aana mat bhoolna",
+  "entities": [[18, 37, "PERSON"], [51, 97, "MESSAGE"]]
+},
+{
+  "text": "Say to Tanya Gupta on WhatsApp ki kal Diwali shopping karne chalein?",
+  "entities": [[7, 18, "PERSON"], [32, 72, "MESSAGE"]]
+},
+{
+  "text": "Write to Priya Sen on WhatsApp thanks for helping me out in the project, tum best ho",
+  "entities": [[9, 18, "PERSON"], [32, 90, "MESSAGE"]]
+},
+{
+  "text": "Message to Ramesh Yadav on WhatsApp: bhoolna mat documents laana kal office",
+  "entities": [[11, 23, "PERSON"], [37, 85, "MESSAGE"]]
+},
+{
+  "text": "Please send Mohit Kumar a WhatsApp message saying kal raat call karna important hai",
+  "entities": [[12, 23, "PERSON"], [46, 91, "MESSAGE"]]
+},
+{
+  "text": "Tell Seema Rani on WhatsApp I’m outside your house, gate kholo",
+  "entities": [[5, 15, "PERSON"], [29, 66, "MESSAGE"]]
+},
+{
+  "text": "Send WhatsApp to Virat Sharma kal match ke tickets le aana",
+  "entities": [[18, 30, "PERSON"], [31, 69, "MESSAGE"]]
+},
+{
+  "text": "Message Aman Kapoor on WhatsApp: bro mujhe kal library me notes de dena",
+  "entities": [[8, 19, "PERSON"], [33, 81, "MESSAGE"]]
+},
+{
+  "text": "Text to Deepika Verma on WhatsApp kal shaam 6 baje cafe me milna",
+  "entities": [[8, 20, "PERSON"], [34, 75, "MESSAGE"]]
+},
+{"text": "Send Sameer a message on WhatsApp kal milte hain", "entities": [[5, 11, "PERSON"], [33, 47, "MESSAGE"]]},
+{"text": "Please tell Neha Gupta via WhatsApp thanks for your help yaar", "entities": [[12, 22, "PERSON"], [38, 67, "MESSAGE"]]},
+{"text": "Message Ramesh Chandra on WhatsApp ki kal office mat bhoolna", "entities": [[8, 22, "PERSON"], [36, 63, "MESSAGE"]]},
+{"text": "Forward to Tanya Roy on WhatsApp mujhe ghar pahuchte hi call karna", "entities": [[12, 21, "PERSON"], [37, 73, "MESSAGE"]]},
+{"text": "Send a note to Rahul Verma on WhatsApp kal doctor ke paas jana hai", "entities": [[15, 26, "PERSON"], [42, 74, "MESSAGE"]]},
+{"text": "Tell Anjali Gupta WhatsApp pe mujhe apna notes bhejna", "entities": [[5, 17, "PERSON"], [29, 56, "MESSAGE"]]},
+{"text": "Message Shyam Sundar via WhatsApp meeting postpone ho gayi hai", "entities": [[8, 20, "PERSON"], [36, 67, "MESSAGE"]]},
+{"text": "Please forward to Snehal Patil on WhatsApp kal ki party cancel ho gayi hai", "entities": [[21, 33, "PERSON"], [49, 82, "MESSAGE"]]},
+{"text": "Text Komal Singh WhatsApp pe kal tuition 5 baje hai", "entities": [[5, 16, "PERSON"], [28, 53, "MESSAGE"]]},
+{"text": "Write to Arvind Mehta on WhatsApp bring pendrive tomorrow", "entities": [[9, 21, "PERSON"], [37, 64, "MESSAGE"]]},
+{"text": "Tell Meera Kapoor via WhatsApp kal surprise party hai", "entities": [[5, 17, "PERSON"], [33, 59, "MESSAGE"]]},
+{"text": "Please message Saurabh Rathi on WhatsApp lunch time confirm karna", "entities": [[15, 29, "PERSON"], [45, 73, "MESSAGE"]]},
+{"text": "Send Ajay Kumar WhatsApp pe ki main class attend nahi kar paunga", "entities": [[5, 15, "PERSON"], [29, 63, "MESSAGE"]]},
+
+{"text": "Text to Ruchi Singh via WhatsApp mujhe notes forward karna", "entities": [[8, 19, "PERSON"], [35, 62, "MESSAGE"]]},
+
+{"text": "Say to Vinay Gupta on WhatsApp ki kal lunch cancel hai", "entities": [[7, 18, "PERSON"], [34, 57, "MESSAGE"]]},
+
+{"text": "Send Pooja Sharma WhatsApp pe kal ki meeting confirm kar dena", "entities": [[5, 17, "PERSON"], [29, 63, "MESSAGE"]]},
+
+{"text": "Message to Ankit Jain on WhatsApp report submit karna hai", "entities": [[12, 22, "PERSON"], [38, 66, "MESSAGE"]]},
+
+{"text": "Tell Rohit Verma via WhatsApp ki main late aaunga", "entities": [[5, 16, "PERSON"], [32, 55, "MESSAGE"]]},
+
+{"text": "Forward this to Alok Singh WhatsApp pe kal ka homework bhejna", "entities": [[18, 28, "PERSON"], [40, 69, "MESSAGE"]]},
+
+{"text": "Send a quick text to Priya Mehta on WhatsApp kaam khatam ho gaya", "entities": [[24, 35, "PERSON"], [51, 76, "MESSAGE"]]},
+
+{"text": "Send Pooja Sharma kal ki meeting confirm kar dena", "entities": [[5, 17, "PERSON"], [18, 52, "MESSAGE"]]},
+
+{"text": "Message to Ankit Jain report submit karna hai", "entities": [[12, 22, "PERSON"], [23, 51, "MESSAGE"]]},
+
+{"text": "Tell Rohit Verma ki main late aaunga", "entities": [[5, 16, "PERSON"], [20, 43, "MESSAGE"]]},
+
+{"text": "Forward this to Alok Singh kal ka homework bhejna", "entities": [[18, 28, "PERSON"], [29, 58, "MESSAGE"]]},
+
+{"text": "Send a quick text to Priya Mehta kaam khatam ho gaya", "entities": [[24, 35, "PERSON"], [36, 61, "MESSAGE"]]},
+
+{"text": "Message Sunita Rani party postpone kar di gayi hai", "entities": [[8, 20, "PERSON"], [21, 56, "MESSAGE"]]},
+
+{"text": "Please inform to Harshad Joshi train 7 baje aayegi", "entities": [[18, 31, "PERSON"], [32, 57, "MESSAGE"]]},
+
+{"text": "Text Abhishek Sharma ki assignment ready hai", "entities": [[5, 20, "PERSON"], [24, 51, "MESSAGE"]]},
+
+{"text": "Say to Manish Patel ghar pahuchne par call karna", "entities": [[7, 19, "PERSON"], [20, 53, "MESSAGE"]]},
+
+{"text": "Write a message to Deepika Nair documents lekar aana", "entities": [[22, 34, "PERSON"], [35, 62, "MESSAGE"]]},
+
+{"text": "Tell Rajesh Gupta kal ki class cancel hai", "entities": [[5, 17, "PERSON"], [18, 47, "MESSAGE"]]},
+
+{"text": "Please send to Sneha Reddy dinner time confirm karna", "entities": [[16, 27, "PERSON"], [28, 60, "MESSAGE"]]},
+
+{"text": "Forward message to Gaurav Jain party venue badal gaya", "entities": [[21, 32, "PERSON"], [33, 62, "MESSAGE"]]},
+
+{"text": "Send Kavita Sharma ki train delay ho gayi hai", "entities": [[5, 18, "PERSON"], [22, 53, "MESSAGE"]]},
+
+{"text": "Message for Neeraj Pandey kal meeting 3 baje hai", "entities": [[13, 26, "PERSON"], [27, 54, "MESSAGE"]]},
+
+{"text": "Inform Anjali Verma mujhe ghar pahunchte hi call karo", "entities": [[7, 19, "PERSON"], [20, 56, "MESSAGE"]]},
+
+{"text": "Please text to Rajiv Kumar ki lunch cancel karna", "entities": [[17, 28, "PERSON"], [32, 57, "MESSAGE"]]},
+
+{"text": "Send note to Reema Chopra office kaam ho gaya", "entities": [[13, 25, "PERSON"], [26, 51, "MESSAGE"]]},
+
+{"text": "Tell Abhinav Singh ki main presentation ready kar raha hoon", "entities": [[5, 19, "PERSON"], [23, 63, "MESSAGE"]]},
+
+{"text": "Message Parul Jain mujhe apna schedule bhejna", "entities": [[8, 18, "PERSON"], [19, 50, "MESSAGE"]]},
+
+{"text": "Send Sameer a message saying kal milte hain", "entities": [[5, 11, "PERSON"], [28, 43, "MESSAGE"]]},
+
+{"text": "Please tell Neha Gupta thanks for your help yaar", "entities": [[12, 22, "PERSON"], [23, 52, "MESSAGE"]]},
+
+{"text": "Message Ramesh Chandra ki kal office mat bhoolna", "entities": [[8, 22, "PERSON"], [26, 53, "MESSAGE"]]},
+
+{"text": "Forward to Tanya Roy mujhe ghar pahuchte hi call karna", "entities": [[12, 21, "PERSON"], [22, 58, "MESSAGE"]]},
+
+{"text": "Send a note to Rahul Verma kal doctor ke paas jana hai", "entities": [[15, 26, "PERSON"], [27, 59, "MESSAGE"]]},
+
+{"text": "Tell Anjali Gupta mujhe apna notes bhejna", "entities": [[5, 17, "PERSON"], [18, 45, "MESSAGE"]]},
+
+{"text": "Message Shyam Sundar meeting postpone ho gayi hai", "entities": [[8, 20, "PERSON"], [21, 52, "MESSAGE"]]},
+
+{"text": "Please forward to Snehal Patil kal ki party cancel ho gayi hai", "entities": [[21, 33, "PERSON"], [34, 67, "MESSAGE"]]},
+
+{"text": "Text Komal Singh kal tuition 5 baje hai", "entities": [[5, 16, "PERSON"], [17, 42, "MESSAGE"]]},
+
+{"text": "Write to Arvind Mehta bring pendrive tomorrow", "entities": [[9, 21, "PERSON"], [22, 49, "MESSAGE"]]},
+
+{"text": "Tell Meera Kapoor kal surprise party hai", "entities": [[5, 17, "PERSON"], [18, 44, "MESSAGE"]]},
+
+{"text": "Please message Saurabh Rathi lunch time confirm karna", "entities": [[15, 29, "PERSON"], [30, 58, "MESSAGE"]]},
+
+{"text": "Send Ajay Kumar ki main class attend nahi kar paunga", "entities": [[5, 15, "PERSON"], [19, 53, "MESSAGE"]]},
+
+{"text": "Text to Ruchi Singh mujhe notes forward karna", "entities": [[8, 19, "PERSON"], [20, 47, "MESSAGE"]]},
+
+{"text": "Say to Vinay Gupta ki kal lunch cancel hai", "entities": [[7, 18, "PERSON"], [22, 45, "MESSAGE"]]},
+
+{"text": "WhatsApp Priya Sharma bolna kal shopping mall milte hain", "entities": [[9, 21, "PERSON"], [30, 66, "MESSAGE"]]},
+
+{"text": "Send Rahul Verma a WhatsApp note kal doctor ke paas jana hai", "entities": [[5, 16, "PERSON"], [36, 70, "MESSAGE"]]},
+
+{"text": "Please forward this WhatsApp to Anjali Gupta mujhe apna notes bhejna", "entities": [[32, 44, "PERSON"], [45, 75, "MESSAGE"]]},
+
+{"text": "Tell Shyam Sundar on WhatsApp meeting postpone ho gayi hai", "entities": [[5, 17, "PERSON"], [31, 65, "MESSAGE"]]},
+
+{"text": "WhatsApp to Snehal Patil kal ki party cancel ho gayi hai", "entities": [[12, 24, "PERSON"], [25, 62, "MESSAGE"]]},
+
+{"text": "Message Rohit Raj WhatsApp pe ki main thoda late aaunga", "entities": [[8, 17, "PERSON"], [30, 63, "MESSAGE"]]},
+
+{"text": "Text Komal Singh on WhatsApp kal tuition 5 baje hai", "entities": [[5, 16, "PERSON"], [30, 56, "MESSAGE"]]},
+
+{"text": "Write to Arvind Mehta on WhatsApp bring pendrive tomorrow", "entities": [[9, 21, "PERSON"], [35, 63, "MESSAGE"]]},
+
+{"text": "Send Manish Gupta WhatsApp kal presentation file bhejna", "entities": [[5, 17, "PERSON"], [26, 60, "MESSAGE"]]},
+
+{"text": "Please WhatsApp Deepa Rani hello, class kab start hogi?", "entities": [[15, 25, "PERSON"], [26, 61, "MESSAGE"]]},
+
+{"text": "Forward on WhatsApp to Raj Malhotra party address change ho gaya", "entities": [[25, 37, "PERSON"], [38, 71, "MESSAGE"]]},
+
+{"text": "Tell to Nisha Agarwal on WhatsApp kaam complete karna hai", "entities": [[8, 21, "PERSON"], [35, 66, "MESSAGE"]]},
+
+{"text": "Send on WhatsApp to Aditya Sharma kal mera birthday yaad rakhna", "entities": [[22, 35, "PERSON"], [36, 71, "MESSAGE"]]},
+
+{"text": "Text to Ruchi Singh WhatsApp mujhe notes forward karna", "entities": [[8, 19, "PERSON"], [29, 59, "MESSAGE"]]},
+
+{"text": "WhatsApp message for Sanjay Verma kal cricket ground aa jana", "entities": [[23, 35, "PERSON"], [36, 71, "MESSAGE"]]},
+
+{"text": "Send Prakash Sharma WhatsApp kal meeting 3 baje fix ho gayi", "entities": [[5, 20, "PERSON"], [29, 65, "MESSAGE"]]},
+
+{"text": "Tell Meera Kapoor on WhatsApp kal surprise party hai", "entities": [[5, 17, "PERSON"], [31, 59, "MESSAGE"]]},
+
+{"text": "Please text Saurabh Rathi via WhatsApp lunch time confirm karna", "entities": [[12, 26, "PERSON"], [41, 73, "MESSAGE"]]},
+
+{"text": "Forward WhatsApp to Kritika Singh ghar aate time fruits lana", "entities": [[20, 33, "PERSON"], [34, 69, "MESSAGE"]]},
+
+{"text": "Send Ajay Kumar WhatsApp ki main class attend nahi kar paunga", "entities": [[5, 15, "PERSON"], [24, 66, "MESSAGE"]]},
+
+{"text": "Message on WhatsApp to Rakesh Sharma kal ka project submit karna", "entities": [[23, 36, "PERSON"], [37, 73, "MESSAGE"]]},
+
+{"text": "Text via WhatsApp to Reema Jain mujhe assignment bhejna", "entities": [[22, 32, "PERSON"], [33, 65, "MESSAGE"]]},
+
+{"text": "Say to Vinay Gupta WhatsApp par ki kal lunch cancel hai", "entities": [[7, 18, "PERSON"], [32, 63, "MESSAGE"]]},
+
+{"text": "Send Ritu Raj WhatsApp kal shopping chalna hai", "entities": [[5, 13, "PERSON"], [22, 51, "MESSAGE"]]},
+
+{"text": "WhatsApp Simran Kaur bolna ghar pahuchte hi call karna", "entities": [[9, 21, "PERSON"], [30, 65, "MESSAGE"]]},
+
+{"text": "Tell Aniket Sharma WhatsApp par ki jaldi ghar aa", "entities": [[5, 18, "PERSON"], [32, 55, "MESSAGE"]]},
+
+{"text": "Forward this WhatsApp to Sneha Jain kal ki test postpone ho gayi", "entities": [[32, 42, "PERSON"], [43, 77, "MESSAGE"]]},
+
+{"text": "Send a WhatsApp message to Harsh Vardhan kal book lana", "entities": [[29, 42, "PERSON"], [43, 65, "MESSAGE"]]},
+
+{"text": "Please WhatsApp Seema Yadav kal ghar dinner ke liye aa jana", "entities": [[15, 26, "PERSON"], [27, 66, "MESSAGE"]]},
+
+{"text": "Write a WhatsApp to Arun Verma kal train 9 baje ki hai", "entities": [[23, 33, "PERSON"], [34, 64, "MESSAGE"]]},
+
+{"text": "Send Sameer a message saying kal milte hain on WhatsApp", "entities": [[5, 11, "PERSON"], [30, 48, "MESSAGE"]]},
+{"text": "Please WhatsApp Neha Gupta thanks for your help yaar", "entities": [[15, 25, "PERSON"], [26, 58, "MESSAGE"]]},
+{"text": "Tell Ramesh Chandra on WhatsApp ki kal office mat bhoolna", "entities": [[5, 20, "PERSON"], [34, 64, "MESSAGE"]]},
+{"text": "Forward to Tanya Roy on WhatsApp mujhe ghar pahuchte hi call karna", "entities": [[12, 21, "PERSON"], [35, 76, "MESSAGE"]]},
+{"text": "Message Priya Rani Verma on WhatsApp I am really happy for you", "entities": [[8, 24, "PERSON"], [38, 66, "MESSAGE"]]},
+{"text": "Text Ankit Kumar via WhatsApp bro let's plan a trip to Manali", "entities": [[5, 16, "PERSON"], [31, 69, "MESSAGE"]]},
+{"text": "Say to Neha Gupta on WhatsApp hello yaar kal urgent baat karni hai", "entities": [[7, 17, "PERSON"], [31, 74, "MESSAGE"]]},
+{"text": "Send a WhatsApp to Sameer Ali I’m at the station right now", "entities": [[21, 31, "PERSON"], [32, 64, "MESSAGE"]]},
+{"text": "Send Ramesh Chandra Singh a WhatsApp message kal cricket match yaad hai na", "entities": [[5, 26, "PERSON"], [43, 80, "MESSAGE"]]},
+{"text": "Write to Pooja Mehta on WhatsApp thanks for your help today", "entities": [[9, 20, "PERSON"], [34, 64, "MESSAGE"]]},
+{"text": "Forward this WhatsApp to Mohit Raj I reached safely ghar par", "entities": [[29, 38, "PERSON"], [39, 72, "MESSAGE"]]},
+{"text": "To Kavita Sharma send WhatsApp kal subah library milna please", "entities": [[3, 16, "PERSON"], [31, 67, "MESSAGE"]]},
+{"text": "Message Abhishek Anand on WhatsApp hello dost movie ka plan hai kya?", "entities": [[8, 23, "PERSON"], [37, 75, "MESSAGE"]]},
+{"text": "Please WhatsApp Tanya Roy kal mom dad ghar aa rahe hain dinner tumhare ghar rakhe?", "entities": [[15, 24, "PERSON"], [25, 92, "MESSAGE"]]},
+{"text": "Tell Aditya Pratap Singh on WhatsApp mujhe office ki files bhej dena", "entities": [[5, 25, "PERSON"], [39, 75, "MESSAGE"]]},
+{"text": "Send Seema Kapoor a WhatsApp message hi didi shaam ko bazaar chalna hai kya?", "entities": [[5, 17, "PERSON"], [38, 82, "MESSAGE"]]},
+{"text": "Message to Virat Kohli on WhatsApp kal practice ground par 7 baje aa jana", "entities": [[11, 22, "PERSON"], [36, 80, "MESSAGE"]]},
+{"text": "Say to Deepak Yadav WhatsApp I am waiting near the metro station", "entities": [[7, 19, "PERSON"], [28, 68, "MESSAGE"]]},
+{"text": "Send Ajay Mishra WhatsApp kal subah 10 baje meeting room me milna", "entities": [[5, 16, "PERSON"], [25, 70, "MESSAGE"]]},
+{"text": "WhatsApp Shreya Sen message bhulna mat ki kal party hai", "entities": [[9, 19, "PERSON"], [28, 60, "MESSAGE"]]},
+{"text": "Forward on WhatsApp to Rohit Sharma please bring your laptop tomorrow", "entities": [[25, 37, "PERSON"], [38, 73, "MESSAGE"]]},
+{"text": "Write on WhatsApp to Sneha Kapoor hey how are you doing today?", "entities": [[25, 37, "PERSON"], [38, 70, "MESSAGE"]]},
+{"text": "Message Gaurav Malhotra via WhatsApp Kal ghar aana mat bhoolna", "entities": [[8, 24, "PERSON"], [39, 72, "MESSAGE"]]},
+{"text": "Text Shruti Singh on WhatsApp apna assignment bhejna mat bhoolna", "entities": [[5, 17, "PERSON"], [31, 72, "MESSAGE"]]},
+{"text": "Say to Karan Mehta on WhatsApp party venue change ho gaya hai", "entities": [[7, 18, "PERSON"], [32, 69, "MESSAGE"]]},
+{"text": "WhatsApp to Rajeev Kumar tell him ki kal meri train late ho jayegi", "entities": [[12, 24, "PERSON"], [33, 73, "MESSAGE"]]},
+{"text": "Please send a WhatsApp to Meena Iyer mujhe kal morning jagana", "entities": [[28, 38, "PERSON"], [39, 70, "MESSAGE"]]},
+{"text": "Forward this to Vikas Gupta on WhatsApp kal office mein mat bhoolna", "entities": [[15, 26, "PERSON"], [40, 74, "MESSAGE"]]},
+{"text": "Send Ritu Sharma WhatsApp hi, kal library ke samne milte hain", "entities": [[5, 16, "PERSON"], [25, 67, "MESSAGE"]]},
+{"text": "Tell Arjun Kapoor WhatsApp kar dena jab ghar pahuch jao", "entities": [[5, 17, "PERSON"], [26, 63, "MESSAGE"]]},
+{"text": "Send Sameer a message saying kal milte hain on WhatsApp", "entities": [[5, 11, "PERSON"], [30, 48, "MESSAGE"]]},
+{"text": "Please WhatsApp Neha Gupta thanks for your help yaar", "entities": [[15, 25, "PERSON"], [26, 58, "MESSAGE"]]},
+{"text": "Tell Ramesh Chandra on WhatsApp ki kal office mat bhoolna", "entities": [[5, 20, "PERSON"], [34, 64, "MESSAGE"]]},
+{"text": "Forward to Tanya Roy on WhatsApp mujhe ghar pahuchte hi call karna", "entities": [[12, 21, "PERSON"], [35, 76, "MESSAGE"]]},
+
+{"text": "Rahul ko WhatsApp karna kal aana", "entities": [[0, 5, "PERSON"], [25, 32, "MESSAGE"]]},
+{"text": "Neha DM bhej kal ki photo", "entities": [[0, 4, "PERSON"], [14, 29, "MESSAGE"]]},
+{"text": "Pooja group me bol dinner cancel", "entities": [[0, 5, "PERSON"], [19, 33, "MESSAGE"]]},
+{"text": "Amit ko chat me bhej party confirm", "entities": [[0, 4, "PERSON"], [20, 35, "MESSAGE"]]},
+{"text": "Tanya ko Insta pe msg kar kal aana", "entities": [[0, 5, "PERSON"], [27, 34, "MESSAGE"]]},
+{"text": "Riya ko Telegram kar homework bhejna", "entities": [[0, 4, "PERSON"], [23, 40, "MESSAGE"]]},
+{"text": "Sunita ko DM karna notes bhejna", "entities": [[0, 6, "PERSON"], [22, 36, "MESSAGE"]]},
+{"text": "Gaurav ko group me bol kal class cancel", "entities": [[0, 6, "PERSON"], [22, 41, "MESSAGE"]]},
+{"text": "Ankit ko WhatsApp bhej train delay", "entities": [[0, 5, "PERSON"], [25, 36, "MESSAGE"]]},
+{"text": "Priya ko Signal pe msg karna kal call", "entities": [[0, 5, "PERSON"], [30, 38, "MESSAGE"]]},
+{"text": "Raj ko chat me bol meeting shift", "entities": [[0, 3, "PERSON"], [19, 32, "MESSAGE"]]},
+{"text": "Komal ko DM bhejna project ready", "entities": [[0, 5, "PERSON"], [20, 34, "MESSAGE"]]},
+{"text": "Ajay ko Insta karna dinner confirm", "entities": [[0, 4, "PERSON"], [23, 38, "MESSAGE"]]},
+{"text": "Meera ko Telegram msg bhej exam shift", "entities": [[0, 5, "PERSON"], [28, 40, "MESSAGE"]]},
+{"text": "Sneha ko app me note bhejna homework", "entities": [[0, 5, "PERSON"], [24, 38, "MESSAGE"]]},
+{"text": "Parul ko chat kar kal lunch cancel", "entities": [[0, 5, "PERSON"], [21, 37, "MESSAGE"]]},
+{"text": "Kavita ko DM bhej mujhe call karna", "entities": [[0, 6, "PERSON"], [21, 38, "MESSAGE"]]},
+{"text": "Rohit ko group pe bol report bhejna", "entities": [[0, 5, "PERSON"], [23, 36, "MESSAGE"]]},
+{"text": "Deepika ko Signal kar kal photo bhejna", "entities": [[0, 7, "PERSON"], [28, 45, "MESSAGE"]]},
+{"text": "Abhinav ko Insta me msg karna dinner", "entities": [[0, 7, "PERSON"], [29, 41, "MESSAGE"]]},
+
+{"text": "Send Sameer a message in the group kal office aana mat bhoolna", "entities": [[5, 11, "PERSON"], [38, 70, "MESSAGE"]]},
+{"text": "Forward to Neha Gupta on chat dinner confirm karna", "entities": [[12, 22, "PERSON"], [34, 58, "MESSAGE"]]},
+{"text": "Tell Rahul Verma through DM kal ki photo bhejna", "entities": [[5, 16, "PERSON"], [32, 56, "MESSAGE"]]},
+{"text": "Message Anjali Singh in private chat mujhe abhi call karna", "entities": [[8, 20, "PERSON"], [39, 65, "MESSAGE"]]},
+{"text": "Please send to Ramesh Kumar via app ki report complete karna", "entities": [[15, 27, "PERSON"], [43, 70, "MESSAGE"]]},
+{"text": "Write to Tanya Roy in our group mujhe notes share karna", "entities": [[9, 18, "PERSON"], [36, 63, "MESSAGE"]]},
+{"text": "Text Gaurav Singh on DM ki kal tuition hai", "entities": [[5, 17, "PERSON"], [31, 51, "MESSAGE"]]},
+{"text": "Forward this to Meera Kapoor in chat kal ki meeting cancel hai", "entities": [[18, 30, "PERSON"], [46, 72, "MESSAGE"]]},
+{"text": "Say to Rohit Sharma via app mujhe ghar pahuchne par call karna", "entities": [[7, 19, "PERSON"], [35, 72, "MESSAGE"]]},
+{"text": "Send a quick message to Pooja Sharma in DM exam postpone ho gaya", "entities": [[26, 38, "PERSON"], [54, 80, "MESSAGE"]]},
+{"text": "Please inform Sneha Reddy in our chat kal wala event cancel ho gaya", "entities": [[14, 26, "PERSON"], [42, 77, "MESSAGE"]]},
+{"text": "Message Ajay Verma using the app homework submit karna", "entities": [[8, 18, "PERSON"], [37, 63, "MESSAGE"]]},
+{"text": "Forward note to Sunita Rani on group mujhe updates bhejna", "entities": [[17, 28, "PERSON"], [44, 68, "MESSAGE"]]},
+{"text": "Tell Komal Singh through private chat kal ki party cancel hai", "entities": [[5, 16, "PERSON"], [42, 68, "MESSAGE"]]},
+{"text": "Send to Abhinav Jain using DM dinner confirm karna", "entities": [[8, 19, "PERSON"], [35, 59, "MESSAGE"]]},
+{"text": "Message for Deepika Nair on app mujhe jaldi call karna", "entities": [[13, 25, "PERSON"], [41, 65, "MESSAGE"]]},
+{"text": "Text Priya Mehta in our group ki kal exam shift ho gaya hai", "entities": [[5, 16, "PERSON"], [34, 67, "MESSAGE"]]},
+{"text": "Say to Ruchi Singh via chat mujhe notes bhejna", "entities": [[7, 18, "PERSON"], [34, 56, "MESSAGE"]]},
+{"text": "Forward this message to Ankit Gupta using app project details bhejna", "entities": [[26, 37, "PERSON"], [53, 82, "MESSAGE"]]},
+{"text": "Send note to Kavita Sharma in private chat ki main late aaunga", "entities": [[14, 27, "PERSON"], [45, 72, "MESSAGE"]]}
+
+
+]

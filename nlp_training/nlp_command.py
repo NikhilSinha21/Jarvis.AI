@@ -3,11 +3,12 @@ from features.jarvis_voice import JarvisVoice
 import json
 from features.power_commands import Power
 from features.open_website import OpenWebsite
+from features.send_message import Sendmessage
 # can you please turn off my pc?
 # dep_ sees for negative words
 
 class NlpTrain:
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load("en_core_web_md")
 
     @staticmethod
     def nlp_for_power_command(c): # can you please open youtube
@@ -48,21 +49,31 @@ class NlpTrain:
                         return True
 
                 if category == "open" and intent == "website" :  
-                    print("open run")
-                    # match power commands
                     if any(keyword.lower() in c.lower() for keyword in keywords): #can you   you please   please open   open youtube   can  you  please  open   youtube 
-                        print("hi ha ha ha")
-                        proper_nouns = [ent.text for ent in doc.ents if ent.label_ == "ORG"]
+                        website = [ent.text for ent in doc.ents if ent.label_ == "ORG"]
 
-                        if not proper_nouns:
-                            proper_nouns = [doc[-1].text]
 
-                        if proper_nouns:
+                        if website:
                             print("gi ha ha ah")
                             
-                            JarvisVoice.speak(f"Opening {proper_nouns[0]}")
-                            OpenWebsite.process_command(proper_nouns[0])
+                            JarvisVoice.speak(f"Opening {website[0]}")
+                            OpenWebsite.process_command(website[0])
                             return True
+
+                if category == "message" and intent == "send":
+                    print("open run")
+                    if any(keyword.lower() in c.lower() for keyword in keywords):
+                        print("hi ha ha ha")
+                        person = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
+                        print("Detected PERSON entities:", person)
+
+                        if person:
+                            person = person[0]  # Take the first name only
+                            print("Sending message to:", person)
+                            Sendmessage.whatsappmessage(person,m=None)  # Pass as string
+                        else:
+                            print("No PERSON detected. Please say the name clearly.")
+
                 else:
                     print("cry")            
                         
