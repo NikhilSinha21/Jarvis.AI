@@ -33,8 +33,8 @@ if __name__ == "__main__":
                 JarvisVoice.speak(ai_reply)
                 #_______________________________________________________________________________________________
                 print("Listening for a command (10 second timeout)...") 
-                #command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
-                command = "Can you please open terminal"
+                command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
+                #command = "Can you please open terminal"
                 if command:
                     #_______________________________________________________________________
                         
