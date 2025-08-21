@@ -1,7 +1,9 @@
 
 import subprocess
+import utils
 
 class OpenApplications:
+    data = utils.get_file()
             # Map of safe apps with exact execution method
     APP_MAP = {
         "camera": lambda: subprocess.Popen(["start", "microsoft.windows.camera:"], shell=True),
@@ -29,12 +31,21 @@ class OpenApplications:
 
     @staticmethod
     def open_app(c: str):
-        app_name = c[5:].strip().lower()
-        if app_name in OpenApplications.APP_MAP:
-            try:
-                OpenApplications.APP_MAP[app_name]()
-                print(f"Opening {app_name}")
-            except Exception as e:
-                print(f"Failed to open '{app_name}': {e}")
-        else:
-            print(f"Unknown app: {app_name}")
+        open_keywords = OpenApplications.data["open"]["app"] 
+        
+    # Normalize command
+        cmd_lower = c.lower()
+
+        # Look for app names inside APP_MAP
+        for app_name in OpenApplications.APP_MAP.keys():
+            if app_name in cmd_lower:   # <-- check if user said the app name
+                try:
+                    OpenApplications.APP_MAP[app_name]()
+                    print(f"Opening {app_name}")
+                    return True
+                except Exception as e:
+                    print(f"Failed to open '{app_name}': {e}")
+                    return False
+
+        print("No known app found in command.")
+        return False

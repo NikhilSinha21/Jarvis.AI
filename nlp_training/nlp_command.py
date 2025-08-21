@@ -4,11 +4,14 @@ import json
 from features.power_commands import Power
 from features.open_website import OpenWebsite
 from features.send_message import Sendmessage
+from features.open_applications import OpenApplications
+import utils
 # can you please turn off my pc?
 # dep_ sees for negative words
 
 class NlpTrain:
     nlp = spacy.load("en_core_web_md")
+    data = utils.get_file()
 
     @staticmethod
     def nlp_for_power_command(c): # can you please open youtube
@@ -26,12 +29,9 @@ class NlpTrain:
             phrases.add(f"{tokens[i]} {tokens[i+1]}")
 
         print("Phrases detected:", phrases)#'can you', 'open', 'you', 'open youtube', 'please open', 'youtube', 'please', 'can', 'you ple ase'
-    
-        with open("command_vocab.json") as f: 
-            data = json.load(f)
-            print("file read")
 
-        for category, intents_dict in data.items():
+
+        for category, intents_dict in NlpTrain.data.items():
             #to run power related commands
             print("category")
             for intent, keywords in intents_dict.items():
@@ -48,18 +48,24 @@ class NlpTrain:
                         getattr(Power, intent)()
                         return True
 
-                if category == "open" and intent == "website" :  
+                if category == "open" and (intent == "website" or  intent == "app"):  
                     if any(keyword.lower() in c.lower() for keyword in keywords): #can you   you please   please open   open youtube   can  you  please  open   youtube 
-                        website = [ent.text for ent in doc.ents if ent.label_ == "ORG"]
 
+                        if intent == "website":
+                            website = [ent.text for ent in doc.ents if ent.label_ in ("ORG", "PRODUCT")]
 
-                        if website:
-                            print("gi ha ha ah")
-                            
-                            JarvisVoice.speak(f"Opening {website[0]}")
-                            OpenWebsite.process_command(website[0])
-                            return True
-
+                            if website:
+                                print("gi ha ha ah")
+                                
+                                JarvisVoice.speak(f"Opening {website[0]}")
+                                OpenWebsite.process_command(website[0])
+                                return True
+                        if intent == "app" :
+                            JarvisVoice.speak(f"Opening ")
+                            OpenApplications.open_app(c)
+                        
+                     
+                '''
                 if category == "message" and intent == "send":
                     print("open run")
                     if any(keyword.lower() in c.lower() for keyword in keywords):
@@ -73,9 +79,8 @@ class NlpTrain:
                             Sendmessage.whatsappmessage(person,m=None)  # Pass as string
                         else:
                             print("No PERSON detected. Please say the name clearly.")
-
-                else:
-                    print("cry")            
+                 '''
+                           
                         
         print("sorry")        
         return False    

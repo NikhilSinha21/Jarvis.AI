@@ -4,10 +4,9 @@ from features.search_things import SearchThings
 from features.open_applications import OpenApplications
 from features.send_message import Sendmessage
 from features.jarvis_voice import JarvisVoice
-from features.power_commands import Power
 from features.system_controls import SystemControls
 from nlp_training.nlp_command import NlpTrain
-from nlp_training.word_learner import WordLearner
+
 def handle_open_command(command: str):
     clean_name = command[5:].strip().lower()
 
@@ -35,11 +34,12 @@ if __name__ == "__main__":
                 #_______________________________________________________________________________________________
                 print("Listening for a command (10 second timeout)...") 
                 #command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
-                command = "Can you please send Sameer a message how are you my friend"
+                command = "Can you please open terminal"
                 if command:
                     #_______________________________________________________________________
                         
                     NlpTrain.nlp_for_power_command(command)
+                 
 
                     #_______________________________________________________________________
                         
