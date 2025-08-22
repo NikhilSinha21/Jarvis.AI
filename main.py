@@ -34,7 +34,7 @@ if __name__ == "__main__":
                 #_______________________________________________________________________________________________
                 print("Listening for a command (10 second timeout)...") 
                 #command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
-                command = "jarvis can you search modi"
+                command = "jarvis can you search titanic Movie"
                 if command:
                     #_______________________________________________________________________
                         

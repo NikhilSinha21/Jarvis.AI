@@ -8,6 +8,7 @@ from features.jarvis_emotion import JarvisEmotion
 
 class SearchThingsDDG:
     data = utils.get_file()
+
     @staticmethod
     def clean_query(command: str):
         command = command.lower().strip()
@@ -36,31 +37,42 @@ class SearchThingsDDG:
         try:
             about = wikipedia.summary(clean_query, sentences=2)
         except:
-
-        # text search
+            # text search
             with DDGS() as ddgs:
-                result = list(ddgs.text(query, max_results=3))  # wrap in list
+                result = list(ddgs.text(query, max_results=3))
                 result = list(ddgs.text(clean_query, max_results=3))
                 if result:
                     about = result[0].get("body") or result[0].get("title") or ""
                     # Remove timestamps like "5 hours ago"
-                    about = re.sub(r'\d+\s+(hour|hours|minute|minutes|day|days)\s+ago', '', about, flags=re.IGNORECASE)
+                    about = re.sub(
+                        r'\d+\s+(hour|hours|minute|minutes|day|days)\s+ago',
+                        '',
+                        about,
+                        flags=re.IGNORECASE
+                    )
                     about = about.strip()
-
 
         # image search
         with DDGS() as ddgs:
-            ifimage = list(ddgs.images(query, max_results=3))  # wrap in list
+            ifimage = list(ddgs.images(query, max_results=3))
             if ifimage:
                 image = ifimage[0]["image"]
 
-        lines = about.split('. ')  # split by sentences
-        speak_text = '. '.join(lines[:2])  # first 2 sentences
+        lines = about.split('. ')
+        speak_text = '. '.join(lines[:2])  # take first 2 sentences
         if speak_text:
             print(speak_text)
-            emotional_text = JarvisEmotion.add_fillers(speak_text)
-            JarvisVoice.speak(emotional_text + ". Here’s more information about it and image as well")
-        
+
+            # ✅ Sentiment detection
+            sentiment = JarvisEmotion.analyze(speak_text)
+
+            # ✅ Add fillers based on sentiment
+            emotional_text = JarvisEmotion.add_fillers(speak_text, sentiment)
+
+            JarvisVoice.speak(
+                emotional_text + ". Here’s more information about it" +
+                (", and also an image." if image else "")
+            )
 
         # combine results
         if about and image:
