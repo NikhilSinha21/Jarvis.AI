@@ -5,6 +5,7 @@ from features.power_commands import Power
 from features.open_website import OpenWebsite
 from features.send_message import Sendmessage
 from features.open_applications import OpenApplications
+from features.search_things_ddg import SearchThingsDDG
 import utils
 # can you please turn off my pc?
 # dep_ sees for negative words
@@ -64,7 +65,11 @@ class NlpTrain:
                             JarvisVoice.speak(f"Opening ")
                             OpenApplications.open_app(c)
                         
-                     
+                if category == "search" and (intent == "web"):
+                            print("gi na na na na ha ha ah ah")
+
+                            SearchThingsDDG.clean_query(c)
+                            
                 '''
                 if category == "message" and intent == "send":
                     print("open run")

@@ -74,6 +74,27 @@
             "mail",
             "notify"
         ]
+    },
+    "search": {
+        "web": [
+            "search",
+            "look up",
+            "find",
+            "google",
+            "duckduckgo",
+            "bing it",
+            "explore",
+            "check"
+        ],
+        "image": [
+            "show image",
+            "image of",
+            "picture of",
+            "find photo",
+            "display image",
+            "wallpaper of",
+            "gif of"
+        ]
     }
     
 }

@@ -33,8 +33,8 @@ if __name__ == "__main__":
                 JarvisVoice.speak(ai_reply)
                 #_______________________________________________________________________________________________
                 print("Listening for a command (10 second timeout)...") 
-                command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
-                #command = "Can you please open terminal"
+                #command = JarvisVoice.listen(timeout=10, phrase_time_limit=10)
+                command = "jarvis can you search modi"
                 if command:
                     #_______________________________________________________________________
                         
@@ -43,11 +43,11 @@ if __name__ == "__main__":
 
                     #_______________________________________________________________________
                         
-                    if command.lower().startswith("search"):
-                        SearchThings.process_command(command)
+                   # if command.lower().startswith("search"):
+                       # SearchThings.process_command(command)
                     #elif command.lower().startswith("open"):
                         #handle_open_command(command)
-                    elif "message" in command.lower():
+                    if "message" in command.lower():
                         Sendmessage.whatsappmessage(command)
                     elif any(keyword in command.lower() for keyword in ["create", "delete", "rename", "move", "list", "show", "go to", "change directory", "read", "edit file", "append to file"]):
                         file_manager.process_command(command)

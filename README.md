@@ -1,53 +1,93 @@
 Jarvis AI
+
 A Python-powered personal desktop assistant
 
-Jarvis AI is a Python-powered personal desktop assistant that responds to natural voice commands. It can perform searches, open websites, launch desktop applications, control system functions, and
+Jarvis AI is a Python-powered desktop assistant that responds to natural voice commands.
+It can perform web searches, open websites, launch desktop applications, control system functions, and even speak with a bit of human-like hesitation (umm, uhh, hmm) for more natural interaction.
 
-Implemented (v0.2)
-Search the Web – Perform instant searches using voice commands
+Implemented Features (v0.3+)
+✅ Web & Knowledge Search
 
-Open Websites – Launch any website by name or direct URL
+Perform instant searches using DuckDuckGo Search API (DDGS)
 
-Open Desktop Applications – Start installed applications such as:
+Smart fallback to Wikipedia summaries
 
-- Camera 
+Automatic cleaning of queries (search, lookup, etc. removed)
 
-- File Explorer 
+Returns text + images, and can open results in a browser
 
-- VS Code 
+Filters out useless text like “5 hours ago”
 
-- Calculator 
+✅ Voice Output
 
-- Notepad 
+Speaks responses naturally with small fillers (umm, uhh, hmm, you know)
 
+Randomized pauses for human-like flow
 
-Planned Features (Upcoming)
+Reads only first 2 lines, then says:
+“Here’s more information about it” and prints the rest
 
-- Play the first video or open the first search result automatically
+✅ Website & App Control
 
-- Hand gesture recognition to control the PC without touching the keyboard/mouse
+Open websites by name or direct URL
 
-- Improved natural language processing for better   command recognition
+Launch installed desktop applications:
 
+Camera
+
+File Explorer
+
+VS Code
+
+Calculator
+
+Notepad
+
+✅ System Power Commands
+
+Shutdown, restart, lock, sleep, etc.
+
+✅ Messaging
+
+Send messages through WhatsApp
+
+Planned Features (Upcoming 🚀)
+
+Play the first video or open the first search result automatically
+
+Hand gesture recognition to control the PC without mouse/keyboard
+
+Improved NLP with spaCy custom training for better command recognition
+
+Integration with MediaPipe / OpenCV for gesture & face recognition
+
+More natural conversational memory
 
 Update History
 
-
 Update 0.1
-- Added website opening feature
 
-- Added search functionality
-Note: When opening Chrome, a warning may appear:
+Added website opening feature
 
-- "Chrome is being controlled by automated test software"
+Added search functionality
+(Note: Chrome may show "being controlled by automated test software")
 
 Update 0.2
-- Added the ability to open local desktop applications
 
-- Expanded supported commands list
+Added ability to open local desktop applications
 
-- Added the ability to send message through whatsapp
- 
- Update 0.3
+Expanded supported commands list
 
- - added power commands to shutdown and other commands
+Added WhatsApp messaging
+
+Update 0.3
+
+Added power commands (shutdown, restart, etc.)
+
+Improved search with DuckDuckGo + Wikipedia fallback
+
+Image fetching support
+
+Query cleaning (removes “search/lookup …”)
+
+Smarter voice output (first 2 lines + fillers for natural speech)
