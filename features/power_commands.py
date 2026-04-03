@@ -1,13 +1,12 @@
 import subprocess
 import time
 import keyboard
-from features.jarvis_voice import JarvisVoice
 class Power:
 
     @staticmethod
     def confirm_with_delay(action_text, delay=3):
         """Shows countdown and cancels if ANY recognized key is pressed."""
-        JarvisVoice.speak(f"{action_text} in {delay} seconds. Press any key to cancel.")
+        print(f"{action_text} in {delay} seconds. Press any key to cancel.")
         
         # Minimal safe key list (works across most layouts)
         all_keys = [
@@ -27,7 +26,7 @@ class Power:
             for key in all_keys:
                 try:
                     if keyboard.is_pressed(key):
-                        JarvisVoice.speak(f"{action_text} cancelled.")
+                        print(f"{action_text} cancelled.")
                         return False
                 except:
                     pass  # ignore unrecognized keys

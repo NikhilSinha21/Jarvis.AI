@@ -1,9 +1,9 @@
 
 import subprocess
-import utils
+from utils import get_file
 
 class OpenApplications:
-    data = utils.get_file()
+    data = get_file()
             # Map of safe apps with exact execution method
     APP_MAP = {
         "camera": lambda: subprocess.Popen(["start", "microsoft.windows.camera:"], shell=True),

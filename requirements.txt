@@ -11,3 +11,5 @@ spacy
 en_core_web_sm
 wisper
 sounddevice
+pygetwindow
+pyautogui

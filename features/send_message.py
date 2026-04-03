@@ -14,7 +14,6 @@
 import pygetwindow as gw
 import time 
 import pyautogui
-from features.jarvis_voice import JarvisVoice
 from features.open_applications import OpenApplications
 import keyboard
 class Sendmessage:
@@ -44,17 +43,13 @@ class Sendmessage:
 
     def confirmation(timeout = 3): # no key press send messeage else abort
         start_time = time.time()
-        JarvisVoice.speak(f"Sending message in {timeout} Seconds.if you want to cancel please press any key")
         while time.time() - start_time < timeout:
             if keyboard.is_pressed():
-                JarvisVoice.speak("Thanks for Confirmation")
-                JarvisVoice.speak("closing Whatsapp")
                 pyautogui.hotkey("alt","f4")
                 return False
             time.sleep(0.1)
         # No key pressed → send message
         pyautogui.press("enter")
-        JarvisVoice.speak("Message sent. Closing WhatsApp.")
         pyautogui.hotkey("alt","f4")
         return True    
 
@@ -64,10 +59,8 @@ class Sendmessage:
             time.sleep(1)
             pyautogui.write(message)
             time.sleep(1)
-            JarvisVoice.speak(f"Are you sure you want to send message to{name}")
             Sendmessage.confirmation(timeout = 3)
         else:
-            JarvisVoice.speak("No Message")
             pyautogui.hotkey("alt","f4")
      
     def whatsappmessage(c,m = None):

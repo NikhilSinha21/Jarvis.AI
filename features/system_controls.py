@@ -4,8 +4,6 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import platform
 import re
 
-from features.jarvis_voice import JarvisVoice
-
 class SystemControls:
     """A class to control system features like brightness, volume"""
 
@@ -24,7 +22,7 @@ class SystemControls:
                 value = int(match.group(1))
                 controls.set_brightness(value)
             else:
-                JarvisVoice.speak("Please specify a brightness value.")
+                print("Please specify a brightness value.")
 
         # --- Volume ---
         elif "increase volume" in cmd:
@@ -37,7 +35,7 @@ class SystemControls:
                 value = int(match.group(1))
                 controls.set_volume(value)
             else:
-                JarvisVoice.speak("Please specify a volume value.")
+                print("Please specify a volume value.")
 
         # --- Mute / Unmute ---
         elif "unmute" in cmd:
@@ -46,7 +44,7 @@ class SystemControls:
             controls.toggle_mute()
 
         else:
-            JarvisVoice.speak("System command not recognized.")
+            print("System command not recognized.")
 
     def __init__(self):
         """Initializes the audio endpoint volume for Windows and checks OS."""

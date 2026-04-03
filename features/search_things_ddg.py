@@ -1,10 +1,8 @@
 from ddgs import DDGS
-from features.jarvis_voice import JarvisVoice
 import utils
 import regex as re 
 import wikipedia
 import webbrowser
-from features.jarvis_emotion import JarvisEmotion
 
 class SearchThingsDDG:
     data = utils.get_file()
@@ -62,15 +60,7 @@ class SearchThingsDDG:
         speak_text = '. '.join(lines[:2])  # take first 2 sentences
         if speak_text:
             print(speak_text)
-
-            # ✅ Sentiment detection
-            sentiment = JarvisEmotion.analyze(speak_text)
-
-            # ✅ Add fillers based on sentiment
-            emotional_text = JarvisEmotion.add_fillers(speak_text, sentiment)
-
-            JarvisVoice.speak(
-                emotional_text + ". Here’s more information about it" +
+            print(". Here’s more information about it" +
                 (", and also an image." if image else "")
             )
 
@@ -88,12 +78,15 @@ class SearchThingsDDG:
         elif image:
             msg = f"{image} — sorry, I cannot find anything about it"
             print(msg)
-            JarvisVoice.speak("Sorry, I cannot find anything about it, but here is an image.")
+            print("Sorry, I cannot find anything about it, but here is an image.")
             webbrowser.open(image)
             return msg
 
         else:
             msg = "Sorry, no data found on internet."
             print(msg)
-            JarvisVoice.speak(msg)
+            print(msg)
             return msg
+
+
+

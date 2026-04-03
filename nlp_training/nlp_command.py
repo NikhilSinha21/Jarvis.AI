@@ -1,92 +1,65 @@
 import spacy
-from features.jarvis_voice import JarvisVoice
-import json
 from features.power_commands import Power
 from features.open_website import OpenWebsite
 from features.send_message import Sendmessage
 from features.open_applications import OpenApplications
 from features.search_things_ddg import SearchThingsDDG
+from features.jarvis_llm import Jarvis_LLM
 import utils
-# can you please turn off my pc?
-# dep_ sees for negative words
 
 class NlpTrain:
     nlp = spacy.load("en_core_web_md")
     data = utils.get_file()
+    jarvis_llm = Jarvis_LLM(data)
 
     @staticmethod
-    def nlp_for_power_command(c): # can you please open youtube
-        doc = NlpTrain.nlp(c) # Can You Please Open Youtube
-        print(doc)
-                      
+    def nlp_for_power_command(command_text):
+        doc = NlpTrain.nlp(command_text)
+        print("Command:", doc.text)
 
         negative = any(token.dep_ == "neg" for token in doc)
-        # Get tokens (lemmas)
-        tokens = [token.lemma_.lower() for token in doc if not token.is_punct] # can you please open youtube
+        tokens = [token.lemma_.lower() for token in doc if not token.is_punct]
         print("Lemmas detected:", tokens)
+
         # Build single + two-word phrases
-        phrases = set(tokens) #'can you', 'open', 'you', 'open youtube', 'please open', 'youtube', 'please', 'can', 'you please'
+        phrases = set(tokens)
         for i in range(len(tokens)-1):
             phrases.add(f"{tokens[i]} {tokens[i+1]}")
+        print("Phrases detected:", phrases)
 
-        print("Phrases detected:", phrases)#'can you', 'open', 'you', 'open youtube', 'please open', 'youtube', 'please', 'can', 'you ple ase'
-
-
+        # Iterate over categories and intents
         for category, intents_dict in NlpTrain.data.items():
-            #to run power related commands
-            print("category")
+            print("Category:", category)
             for intent, keywords in intents_dict.items():
-               # for keyword in keywords:
-               #     if keyword in phrases:
-                # match power commands
-                print("run")
-                if any(keyword.lower() in phrases for keyword in keywords):   # please open   open youtube
+                print("Run intent:", intent)
+                
+                # Power commands
+                if any(keyword.lower() in phrases for keyword in keywords):
                     print(f"Matched intent: {intent} in category: {category}")
                     if negative:
-                        JarvisVoice.speak(f"No command executed for {intent}")
+                        print(f"No command executed for {intent}")
                         return True
                     if hasattr(Power, intent):
                         getattr(Power, intent)()
                         return True
 
-                if category == "open" and (intent == "website" or  intent == "app"):  
-                    if any(keyword.lower() in c.lower() for keyword in keywords): #can you   you please   please open   open youtube   can  you  please  open   youtube 
-
+                # Open website/app
+                if category == "open" and intent in ["website", "app"]:
+                    if any(keyword.lower() in command_text.lower() for keyword in keywords):
                         if intent == "website":
                             website = [ent.text for ent in doc.ents if ent.label_ in ("ORG", "PRODUCT")]
-
                             if website:
-                                print("gi ha ha ah")
-                                
-                                JarvisVoice.speak(f"Opening {website[0]}")
+                                print(f"Opening {website[0]}")
                                 OpenWebsite.process_command(website[0])
                                 return True
-                        if intent == "app" :
-                            JarvisVoice.speak(f"Opening ")
-                            OpenApplications.open_app(c)
-                        
-                if category == "search" and (intent == "web"):
-                            print("gi na na na na ha ha ah ah")
+                        elif intent == "app":
+                            print(f"Opening {command_text}")
+                            OpenApplications.open_app(command_text)
 
-                            SearchThingsDDG.clean_query(c)
-                            
-                '''
-                if category == "message" and intent == "send":
-                    print("open run")
-                    if any(keyword.lower() in c.lower() for keyword in keywords):
-                        print("hi ha ha ha")
-                        person = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
-                        print("Detected PERSON entities:", person)
+                # Web search using LLM
+                if category == "search" and intent == "web":
+                    print("Triggering web search via LLM...")
+                    NlpTrain.jarvis_llm.data_clean(command_text)
 
-                        if person:
-                            person = person[0]  # Take the first name only
-                            print("Sending message to:", person)
-                            Sendmessage.whatsappmessage(person,m=None)  # Pass as string
-                        else:
-                            print("No PERSON detected. Please say the name clearly.")
-                 '''
-                           
-                        
-        print("sorry")        
-        return False    
-
+        print("Sorry, I could not handle that command.")
+        return False

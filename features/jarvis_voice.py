@@ -1,7 +1,6 @@
 
 
 import pyttsx3
-import whisper
 import sounddevice as sd
 import numpy as np
 import queue
